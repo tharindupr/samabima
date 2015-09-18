@@ -8,16 +8,16 @@
  *
  * Main module of the application.
  */
-angular
-  .module('talkApp', [
+var routerApp = angular.module('talkApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+routerApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
