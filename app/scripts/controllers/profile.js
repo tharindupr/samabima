@@ -17,12 +17,12 @@ angular.module('talkApp')
     $scope.fishSchool = [];
     $scope.talk =  notificationService.notification;
 
-    
+
     function loadGitUrl() {
       notificationService.testGitUrl().then(function (data) {
         $scope.fishSchool = data;
       });
-    };
+    }
     loadGitUrl();
 
 
