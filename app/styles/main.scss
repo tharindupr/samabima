@@ -1,0 +1,269 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+
+
+
+/*=============Profile Page================*/
+.header{
+  height: 70px;
+  background-color: black;
+  color: white;
+}
+.main-container{
+  padding: 0px 0px 0px 0px;
+  font-family: segoe ui;
+}
+.profile-pic-box{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #ECECEC;
+  border: 1px solid #B5B3B3;
+  text-align: center;
+}
+.summary-box{
+  background-color: white;
+  border: 1px solid #B5B3B3;
+  border-left: none;
+  border-right: none;
+  font-size: 12px;
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+}
+#profile-username{
+  font-weight: 400;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+#profile-usertype{
+  font-weight: 700;
+  color: gray;
+  padding-bottom: 10px;
+}
+.summary-box-middle{
+  border: 1px solid #B5B3B3;
+}
+#profile-problem-count, #profile-comment-count, #profile-solution-count{
+  font-weight: 700;
+  font-size: 15px;
+}
+.profile-reputation-area{
+  padding-top: 20px;
+}
+.profile-reputation-area .glyphicon-tower{
+  padding: 5px 0px 0px 35px;
+  font-size: 25px;
+  color: darkgoldenrod;
+}
+.profile-reputation-area .text{
+  padding: 13px 5px 0px 0px;
+}
+#profile-reputation-count{
+  font-size: 25px;
+  padding-left: 20px;
+}
+.profile-nav{
+  background: black;
+}
+.profile-nav li a{
+  border-radius: 0px;
+}
+.profile-nav .profile-active{
+  border-radius: 0px;
+  background: #8C8CA5;
+}
+.profile-nav a{
+  color: white;
+}
+.profile-nav li a:hover{
+  background-color: #A09E9E;
+}
+.profile-detail-container{
+  padding-top: 20px;
+  padding-right: 10%;
+}
+#profile-content-title{
+  padding: 15px 0px 15px 70px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.profile-detail-title-container div{
+  padding: 7px;
+  color: #5A5A5A;
+  font-weight: 600;
+}
+.profile-detail-container div{
+  padding: 7px;
+}
+.profile-detail-container .col-xs-2, .profile-detail-container .col-xs-9{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.profile-detail-container .gray-area{
+  background: #EFECEC;
+}
+.profile-detail-container table tbody tr{
+  border-bottom: 1px solid #D8D8D8;
+  border-top: 1px solid #D8D8D8;
+}
+.profile-detail-container table tbody tr td{
+  border:none;
+  padding: 12px 5px 12px 5px;
+  font-size: 15px;
+}
+.profile-detail-container a:hover{
+  text-decoration: none;
+  color: blue
+}
+.profile-detail-container .glyphicon-question-sign, .glyphicon-ok-sign, .glyphicon-comment, .glyphicon-tower {
+  font-size: 25px;
+  color: darkgray;
+  padding-bottom: 30px;
+}
+#problem-desc{
+  font-weight: 500;
+  height: 3em;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+#problem-date, #problem-tags{
+  font-size: 11px;
+  font-weight: 500;
+  color: gray;
+}
+#problem-tags .badge{
+  border:1px solid gray;
+}
+.profile-detail-container a .badge:hover{
+  color: gray;
+  background: white;
+}
+.profile-count-box{
+  font-size: 11px;
+  text-align: center;
+  border: 1px solid #D8D8D8;
+  margin: 5px;
+}
+
+
+#circle-container{
+  width:100px;
+  height:100px;
+  padding-top: 20px;
+}
+.quarter{
+  width:50px;
+  height:50px
+}
+.top-left{
+  border-top-left-radius:50px;
+  background:#09f;
+  float:left
+}
+.top-right{
+  border-top-right-radius:50px;
+  background:#666;
+  float:right
+}
+.bottom-left{
+  border-bottom-left-radius:50px;
+  background:#aaa;
+  float:left
+}
+.bottom-right{
+  border-bottom-right-radius:50px;
+  background:#333;
+  float:right
+}
+
