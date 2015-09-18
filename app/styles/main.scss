@@ -12,12 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+
 
 /* Custom page header */
 .header {
@@ -74,8 +69,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   .header,
   .marketing,
   .footer {
-    padding-left: 0;
-    padding-right: 0;
   }
   /* Space out the masthead */
   .header {
