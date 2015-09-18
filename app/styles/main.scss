@@ -10,9 +10,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
-body {
-  padding: 0;
-}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -70,7 +67,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+  //  max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
@@ -96,8 +93,7 @@ body {
 
 /*=============Profile Page================*/
 .header{
-  height: 70px;
-  background-color: black;
+//  background-color: black;
   color: white;
 }
 .main-container{
@@ -154,7 +150,7 @@ body {
   padding-left: 20px;
 }
 .profile-nav{
-  background: black;
+//  background: black;
 }
 .profile-nav li a{
   border-radius: 0px;
@@ -266,4 +262,3 @@ body {
   background:#333;
   float:right
 }
-

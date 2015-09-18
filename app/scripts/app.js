@@ -44,6 +44,11 @@ routerApp.config(function ($routeProvider) {
         controller: 'ProfileCtrl',
         controllerAs: 'profile'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile'
+      })
       .otherwise({
         redirectTo: '/'
       });
