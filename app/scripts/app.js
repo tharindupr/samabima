@@ -8,16 +8,16 @@
  *
  * Main module of the application.
  */
-angular
-  .module('talkApp', [
+var routerApp = angular.module('talkApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+routerApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -36,6 +36,16 @@ angular
       })
       .when('/profile', {
         templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile'
+      })
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile'
+      })
+      .when('/login', {
+        templateUrl: 'views/login.html',
         controller: 'ProfileCtrl',
         controllerAs: 'profile'
       })
