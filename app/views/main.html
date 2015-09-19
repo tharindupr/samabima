@@ -120,6 +120,7 @@ body {
 <div class="jumbotron">
   <img src="images/samabima.jpg" alt="Samabima" width="200px">
   <!--<h1 style="color: #FF5722">Samabima</h1>
+
   <p class="lead">
   <img src="images/samabima.jpg" alt="Samabima" width="50px"><br>
   සමබිම වෙබ් අඩවිය - ප්‍රජාතන්ත්‍රවාදයට ඇබ්බැහි වෙන්න
@@ -129,15 +130,19 @@ body {
 <a class="btn btn-social-icon glyphicon glyphicon glyphicon-camera"> </a>-->
 </div>
 
+  
+
 <div class="row marketing">
 
 
-  <div class="col-md-9">
+<div class="col-md-9">
 
     <div class="list-group">
 
-      <div  infinite-scroll='loadMore()' infinite-scroll-distance='2' ng-repeat="val in images">
-
+   
+<div infinite-scroll='loadMore()' infinite-scroll-distance='2'>
+    <div ng-repeat='image in images'>
+ 
         <div class="[ panel panel-default ] panel-google-plus">
 
 
@@ -403,6 +408,7 @@ body {
 
 
     </div>
+
 
   </div>
 

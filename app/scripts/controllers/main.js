@@ -8,7 +8,7 @@
  * Controller of the talkApp
  */
 angular.module('talkApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope,$http) {
 
     this.awesomeThings = [
       'HTML5 Boilerplate',
@@ -16,16 +16,14 @@ angular.module('talkApp')
       'Karma'
     ];
 
-    $scope.images = [1];
-    console.log($scope.images);
+   $scope.images = [1, 2, 3, 4, 5, 6, 7, 8];
 
-    $scope.loadMore = function() {
+  $scope.loadMore = function() {
     var last = $scope.images[$scope.images.length - 1];
-    for(var i = 1; i <= 3; i++) {
-      $scope.images.push(last + i)
-    };
-}
-    //notificationService.talk
-  });
+    for(var i = 1; i <= 8; i++) {
+      $scope.images.push(last + i);
+    }
+  };
+});
 
 
