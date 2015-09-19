@@ -11,6 +11,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="../bower_components/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss">
@@ -43,6 +44,12 @@
               <li><a ng-href="#/profile">Profile</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/settings">Contact</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+              <li><a href="javascript:postToggle()">Add Post</a></li>
+              <li><a href="">Logout</a></li>
+              <li><a href="">Login</a></li>
             </ul>
           </div>
         </div>
@@ -60,6 +67,11 @@
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script type="text/javascript">
+      function postToggle() {
+        $("#status_box").slideToggle();
+      }
+    </script>
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),

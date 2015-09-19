@@ -2,8 +2,6 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-image: url("./../images/background.png");
-  background-repeat: no-repeat;
 }
 .facebook-share-box {
   width: 100%;
@@ -84,12 +82,12 @@ body {
 <script type="text/javascript">
   $('#status_message').autogrow();
 </script>
-      <form id="status_box" action="#" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
+      <form style="display:none" id="status_box" action="#" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
         <ul class="post-types">
         </ul>
         <div class="share">
           <div class="panel panel-default">
-            <div class="panel-heading"><i class="fa fa-file"></i> Update Status</div>
+            <div class="panel-heading">Start a Discussion</div>
             <div class="panel-body">
               <div class="">
                 <textarea name="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 62px; overflow: hidden;" placeholder="What's on your mind ?"></textarea>
@@ -97,22 +95,18 @@ body {
             </div>
             <div class="panel-footer">
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-9">
                   <div class="form-group">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default"><i class="icon icon-map-marker"></i> Location</button>
-                      <button type="button" class="btn btn-default"><i class="icon icon-picture"></i> Photo</button>
+                    <div class="btn-group" >
+                      <button type="button" class="btn btn-default"><i class="fa fa-map-marker"></i> Location</button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-picture-o"></i> Attachment</button>
+                        <label style="padding-left: 30px; vertical-align: -webkit-baseline-middle;" class="checkbox-inline"><input type="checkbox" value="">Post as annonymous </label>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5">
-                  <div class="form-group">
-                    <select name="privacy" class="form-control privacy-dropdown pull-left input-sm">
-                      <option value="1" selected="selected">Public</option>
-                      <option value="2">Only my friends</option>
-                      <option value="3">Only me</option>
-                    </select>
-                    <input type="submit" name="submit" value="Post" class="btn btn-primary">
+                <div class="col-md-3" style="text-align:right">
+                  <div class="form-group" >
+                    <input type="submit" name="submit" value="Post" class="btn btn-primary" style="width: 100%;">
                   </div>
                 </div>
               </div>
@@ -122,7 +116,7 @@ body {
       </div>
     </form>
 </div>
-<!--
+
 <div class="jumbotron">
   <img src="images/samabima.jpg" alt="Samabima" width="200px">
   <!--<h1 style="color: #FF5722">Samabima</h1>
@@ -133,9 +127,7 @@ body {
 <!-- <a class="btn btn-social-icon glyphicon glyphicon-road"> </a>
 <a class="btn btn-social-icon glyphicon glyphicon-user"> </a>
 <a class="btn btn-social-icon glyphicon glyphicon glyphicon-camera"> </a>-->
-<!--
 </div>
--->
 
 
 
@@ -234,8 +226,7 @@ body {
 
               <p style="text-justify: distribute">ලංකාව සම්බන්ධයෙන් පසුගිය කාලේ ජාත්‍යන්තර වේදිකාවේ තිබුණු මතය සෑහෙන්න වෙනස්වෙලා තිබෙන බවක් පෙනෙනවා. නමුත් ඒකට ඉතිහාසයක් තියෙනවා නේද? යුද්ධය සම්බන්ධයෙන් 1994 දක්වා යම් ප‍්‍රමාණයකට බලපෑමක් ගේන්න උත්සාහ කළාට ඒක සාර්ථක වුණේ නැහැ. 94න් පස්සේ ආපු ආණ්ඩුව මානව හිමිකම් හිතවාදී ප‍්‍රතිපත්තියක් තමයි ගෙනිච්චේ. විවිධ ජාත්‍යන්තර සම්මුතිවලට අත්සන් කරලා එහෙම මානව හිමිකම් වාර්තාවත් හොඳ කරගත්තා. ඒ නිසා <a href="#">[continue reading…]</a></p>
               <div class="pull-right">
-
-                <img src="images/commnet.png" class="grow"> <span>5</span>
+                <img src="images/commnet.png"class="grow"> <span>5</span>
                 <!--   <img src="images/vote.png"class="grow"> <span></span>-->
                 <img src="images/upvote.png"class="grow"> <span>200</span>
                 <img src="images/downvote.png"class="grow"> <span>12</span>
