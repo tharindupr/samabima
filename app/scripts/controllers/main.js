@@ -17,6 +17,8 @@ angular.module('talkApp')
 
     $scope.images = [1, 2,3];
 
+    $scope.tags = ["Environment", "Water", "Pollution", "Police", "Garbage", "Parliament"];
+
     $scope.loadMore = function() {
       var last = $scope.images[$scope.images.length - 1];
       for(var i = 1; i <= 3; i++) {
