@@ -31,28 +31,29 @@
       <div class="col-md-12" id="myTabs">
         <ul class="nav nav-tabs " role="tablist" id="myTabs">
           <li class="active">
-            <a href="#profile-basic-info" role="tab" data-toggle="tab">Profile</a>
+            <a  ng-click="tabClick(1)" role="tab" data-toggle="tab">Profile</a>
           </li>
           <li>
-            <a href="#profile-problems-info" role="tab" data-toggle="tab">Problems</a>
+            <a ng-click="tabClick(2)" role="tab" data-toggle="tab">Problems</a>
           </li>
           <li>
-            <a href="#profile-comments-info" role="tab" data-toggle="tab">Comments</a>
+            <a  ng-click="tabClick(3)" role="tab" data-toggle="tab">Comments</a>
           </li>
           <li>
-            <a href="#profile-reputation-info" role="tab" data-toggle="tab">Reputation</a>
+            <a ng-click="tabClick(4)" role="tab" data-toggle="tab">Reputation</a>
           </li>
           <li>
-            <a href="" role="tab" data-toggle="tab">Tags</a>
+            <a role="tab" data-toggle="tab">Tags</a>
           </li>
           <li>
-            <a href="#" role="tab" data-toggle="tab">Badges</a>
+            <a role="tab" data-toggle="tab">Badges</a>
           </li>
         </ul>
       </div>
     </div>
+
     <div class="row profile-detail-container tab-content">
-      <div id="profile-basic-info" class="tab-pane fade active in">
+      <div id="profile-basic-info" class="tab-pane fade" ng-class="profile">
         <!--Basic Info-->
         <div id="profile-content-title">Basic Information</div>
         <div class="col-xs-2 col-md-offset-1 profile-detail-title-container">
@@ -88,7 +89,7 @@
           </div>
         </div>
       </div>
-      <div id="profile-problems-info" class="tab-pane fade">
+      <div id="profile-problems-info" class="tab-pane fade" ng-class="problem">
         <!--problems info-->
         <div id="profile-content-title">Posted Problems</div>
         <div class="col-md-offset-1">
@@ -256,7 +257,7 @@
           </table>
         </div>
       </div>
-      <div id="profile-comments-info" class="tab-pane fade">
+      <div id="profile-comments-info" class="tab-pane fade" ng-class="comments">
         <!--comments info-->
         <div id="profile-content-title">Posted Comments</div>
         <div class="col-md-offset-1">
@@ -361,7 +362,7 @@
           </table>
         </div>
       </div>
-      <div id="profile-reputation-info" class="tab-pane fade">
+      <div id="profile-reputation-info" class="tab-pane fade" ng-class="reputation">
         <!--reputation info-->
         <div id="profile-content-title">Reputation Earned</div>
         <div class="col-md-offset-1 tab-pane" role="tabpanel">
