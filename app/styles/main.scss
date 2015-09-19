@@ -259,11 +259,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 }
 
+/*=============grow================*/
 .grow {
   display:inline-block;
   border:0;
-  width:30px;
-  height:30px;
+  width:20px;
+  height:20px;
   position: relative;
   -webkit-transition: all 200ms ease-in;
   -webkit-transform: scale(1);
@@ -285,4 +286,86 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   -moz-transform: scale(1.25);
   transition: all 200ms ease-in;
   transform: scale(1.25);
+}
+
+
+/*=============Main Paage Css ================*/
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.facebook-share-box {
+  width: 100%;
+}
+.facebook-share-box .share {
+  -webkit-transition: 0.1s ease-out height;
+  -moz-transition: 0.1s ease-out height;
+  -ms-transition: 0.1s ease-out height;
+  -o-transition: 0.1s ease-out height;
+  transition: 0.1s ease-out height;
+  clear: both;
+  background: white;
+  border: 2px solid #dddddd;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.facebook-share-box .share .arrow {
+  background: url(arrow.png) no-repeat #dddddd;
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  left: 4px;
+  display: inline;
+  top: -10px;
+  -webkit-transition: 0.3s ease-out all;
+  -moz-transition: 0.3s ease-out all;
+  -ms-transition: 0.3s ease-out all;
+  -o-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+}
+
+.facebook-share-box .post-types li a {
+  color: #085083;
+  text-decoration: none;
+}
+
+.facebook-share-box .post-types li a.active {
+  color: #404040;
+}
+
+.facebook-share-box .post-types {
+  padding-left: 5px;
+}
+
+.facebook-share-box ul {
+  list-style: none;
+  margin-bottom: 9px;
+}
+
+.facebook-share-box .post-types li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.message {
+  border-radius: 0;
+  border: none;
+}
+.panel {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0;
+}
+
+.privacy-dropdown {
+  width: 100px;
+}
+
+#status_box{
+  top: 44px;
+  width: 40%;
+  right: 0px;
+  position: fixed;
+  z-index: 2000;
 }

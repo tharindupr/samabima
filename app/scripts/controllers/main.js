@@ -16,6 +16,35 @@ angular.module('talkApp')
       'Karma'
     ];
 
+    $http({
+      method: "GET",
+      url: "http://192.168.0.108/samabima/Samabima/public/post"
+    }).success(function(data, status, header, config){
+      
+          $scope.json=data;
+          $scope.tags=new Array();
+          for(var i = 0; i < data.length; i++)
+
+          {
+            $http({
+                  method: "GET",
+                  url: "http://192.168.0.108/samabima/Samabima/public/post/"+data[i]['post_id']+"/tags"
+                }).success(function(d, s, h, c)
+                {
+                  
+                
+                $scope.tags[d['post_id']]=d;
+
+                   
+                });
+
+
+          }
+
+
+    });
+
+    
    $scope.images = [1, 2, 3, 4, 5, 6, 7, 8];
 
   $scope.loadMore = function() {
@@ -24,6 +53,9 @@ angular.module('talkApp')
       $scope.images.push(last + i);
     }
   };
+
+    $('#status_message').autogrow();
+
 });
 
 
