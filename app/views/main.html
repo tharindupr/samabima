@@ -1,13 +1,133 @@
+<style media="screen">
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.facebook-share-box {
+  width: 100%;
+}
+.facebook-share-box .share {
+  -webkit-transition: 0.1s ease-out height;
+  -moz-transition: 0.1s ease-out height;
+  -ms-transition: 0.1s ease-out height;
+  -o-transition: 0.1s ease-out height;
+  transition: 0.1s ease-out height;
+  clear: both;
+  background: white;
+  border: 2px solid #dddddd;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.facebook-share-box .share .arrow {
+  background: url(arrow.png) no-repeat #dddddd;
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  left: 4px;
+  display: inline;
+  top: -10px;
+  -webkit-transition: 0.3s ease-out all;
+  -moz-transition: 0.3s ease-out all;
+  -ms-transition: 0.3s ease-out all;
+  -o-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+}
+
+.facebook-share-box .post-types li a {
+  color: #085083;
+  text-decoration: none;
+}
+
+.facebook-share-box .post-types li a.active {
+  color: #404040;
+}
+
+.facebook-share-box .post-types {
+  padding-left: 5px;
+}
+
+.facebook-share-box ul {
+  list-style: none;
+  margin-bottom: 9px;
+}
+
+.facebook-share-box .post-types li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.message {
+  border-radius: 0;
+  border: none;
+}
+.panel {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0;
+}
+
+.privacy-dropdown {
+  width: 100px;
+}
+</style>
+<script type="text/javascript">
+  $('#status_message').autogrow();
+</script>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form action="#" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
+        <ul class="post-types">
+        </ul>
+        <div class="share">
+          <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-file"></i> Update Status</div>
+            <div class="panel-body">
+              <div class="">
+                <textarea name="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 62px; overflow: hidden;" placeholder="What's on your mind ?"></textarea>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default"><i class="icon icon-map-marker"></i> Location</button>
+                      <button type="button" class="btn btn-default"><i class="icon icon-picture"></i> Photo</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <select name="privacy" class="form-control privacy-dropdown pull-left input-sm">
+                      <option value="1" selected="selected">Public</option>
+                      <option value="2">Only my friends</option>
+                      <option value="3">Only me</option>
+                    </select>
+                    <input type="submit" name="submit" value="Post" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
 <div class="jumbotron">
   <img src="images/samabima.jpg" alt="Samabima" width="200px">
   <!--<h1 style="color: #FF5722">Samabima</h1>
-<p class="lead">
+
+  <p class="lead">
   <img src="images/samabima.jpg" alt="Samabima" width="50px"><br>
   සමබිම වෙබ් අඩවිය - ප්‍රජාතන්ත්‍රවාදයට ඇබ්බැහි වෙන්න
 </p>-->
- <!-- <a class="btn btn-social-icon glyphicon glyphicon-road"> </a>
-  <a class="btn btn-social-icon glyphicon glyphicon-user"> </a>
-  <a class="btn btn-social-icon glyphicon glyphicon glyphicon-camera"> </a>-->
+<!-- <a class="btn btn-social-icon glyphicon glyphicon-road"> </a>
+<a class="btn btn-social-icon glyphicon glyphicon-user"> </a>
+<a class="btn btn-social-icon glyphicon glyphicon glyphicon-camera"> </a>-->
 </div>
 
   
@@ -17,62 +137,63 @@
 
 <div class="col-md-9">
 
-  <div class="list-group">
+    <div class="list-group">
+
    
 <div infinite-scroll='loadMore()' infinite-scroll-distance='2'>
     <div ng-repeat='image in images'>
  
-      <div class="[ panel panel-default ] panel-google-plus">
+        <div class="[ panel panel-default ] panel-google-plus">
 
 
-        <div class="">
-          <div class="col-md-4">
-            <img class="[ img-rounded pull-left ]" src="http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg" alt="Mouse0270" width="100px" height="100px" style="padding-right: 10px; padding-top: 10px" />
-            <h3>අරුණ ජයවර්ධන</h3>
-            <div><span class="label label-success" style="padding-left: 10px">  Solved</span>
-              <span class="label label-success" style="padding-left: 10px">  Solved</span>
-              <span class="label label-success" style="padding-left: 10px">  Solved</span>
-              <span class="label label-success" style="padding-left: 10px">  Solved</span>
-              <span class="label label-success" style="padding-left: 10px">  Solved</span></div>
+          <div class="">
+            <div class="col-md-4">
+              <img class="[ img-rounded pull-left ]" src="http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg" alt="Mouse0270" width="100px" height="100px" style="padding-right: 10px; padding-top: 10px" />
+              <h3>අරුණ ජයවර්ධන</h3>
+              <div><span class="label label-success" style="padding-left: 10px">  Solved</span>
+                <span class="label label-success" style="padding-left: 10px">  Solved</span>
+                <span class="label label-success" style="padding-left: 10px">  Solved</span>
+                <span class="label label-success" style="padding-left: 10px">  Solved</span>
+                <span class="label label-success" style="padding-left: 10px">  Solved</span></div>
 
 
-          </div>
-          <div class="col-md-8">
-            <h2>සෞම්‍ය යෝජනාවක් ඒකමතිකව සම්මත වේවි -නීතිඥ සුදර්ශන ගුණවර්ධන</h2>
-            <h5><span>Jun 27, 2014</span> </h5>
-            <br/>
-          </div>
+              </div>
+              <div class="col-md-8">
+                <h2>සෞම්‍ය යෝජනාවක් ඒකමතිකව සම්මත වේවි -නීතිඥ සුදර්ශන ගුණවර්ධන</h2>
+                <h5><span>Jun 27, 2014</span> </h5>
+                <br/>
+              </div>
 
 
 
-        </div>
-        <div class="panel-body">
-          <div class="col-md-4"></div>
-          <div class="col-md-8">
-
-            <p style="text-justify: distribute">ලංකාව සම්බන්ධයෙන් පසුගිය කාලේ ජාත්‍යන්තර වේදිකාවේ තිබුණු මතය සෑහෙන්න වෙනස්වෙලා තිබෙන බවක් පෙනෙනවා. නමුත් ඒකට ඉතිහාසයක් තියෙනවා නේද? යුද්ධය සම්බන්ධයෙන් 1994 දක්වා යම් ප‍්‍රමාණයකට බලපෑමක් ගේන්න උත්සාහ කළාට ඒක සාර්ථක වුණේ නැහැ. 94න් පස්සේ ආපු ආණ්ඩුව මානව හිමිකම් හිතවාදී ප‍්‍රතිපත්තියක් තමයි ගෙනිච්චේ. විවිධ ජාත්‍යන්තර සම්මුතිවලට අත්සන් කරලා එහෙම මානව හිමිකම් වාර්තාවත් හොඳ කරගත්තා. ඒ නිසා <a href="#">[continue reading…]</a></p>
-            <div class="pull-right">
-              <img src="images/commnet.png"class="grow"> <span>5</span>
-              <!--   <img src="images/vote.png"class="grow"> <span></span>-->
-              <img src="images/upvote.png"class="grow"> <span>200</span>
-              <img src="images/downvote.png"class="grow"> <span>12</span>
             </div>
+            <div class="panel-body">
+              <div class="col-md-4"></div>
+              <div class="col-md-8">
+
+                <p style="text-justify: distribute">ලංකාව සම්බන්ධයෙන් පසුගිය කාලේ ජාත්‍යන්තර වේදිකාවේ තිබුණු මතය සෑහෙන්න වෙනස්වෙලා තිබෙන බවක් පෙනෙනවා. නමුත් ඒකට ඉතිහාසයක් තියෙනවා නේද? යුද්ධය සම්බන්ධයෙන් 1994 දක්වා යම් ප‍්‍රමාණයකට බලපෑමක් ගේන්න උත්සාහ කළාට ඒක සාර්ථක වුණේ නැහැ. 94න් පස්සේ ආපු ආණ්ඩුව මානව හිමිකම් හිතවාදී ප‍්‍රතිපත්තියක් තමයි ගෙනිච්චේ. විවිධ ජාත්‍යන්තර සම්මුතිවලට අත්සන් කරලා එහෙම මානව හිමිකම් වාර්තාවත් හොඳ කරගත්තා. ඒ නිසා <a href="#">[continue reading…]</a></p>
+                <div class="pull-right">
+                  <img src="images/commnet.png"class="grow"> <span>5</span>
+                  <!--   <img src="images/vote.png"class="grow"> <span></span>-->
+                  <img src="images/upvote.png"class="grow"> <span>200</span>
+                  <img src="images/downvote.png"class="grow"> <span>12</span>
+                </div>
 
 
+              </div>
+
+            </div>
+            <div class="panel-footer">
+              <!--<button type="button" class="[ btn btn-default ]">+1</button>
+              <button type="button" class="[ btn btn-default ]">
+              <span class="[ glyphicon glyphicon-share-alt ]"></span>
+            </button>
+            <div class="input-placeholder">Add a comment...</div>-->
           </div>
 
-        </div>
-        <div class="panel-footer">
-          <!--<button type="button" class="[ btn btn-default ]">+1</button>
-          <button type="button" class="[ btn btn-default ]">
-            <span class="[ glyphicon glyphicon-share-alt ]"></span>
-          </button>
-          <div class="input-placeholder">Add a comment...</div>-->
         </div>
 
       </div>
-
-    </div>
 
 
 
@@ -92,35 +213,35 @@
               <span class="label label-success" style="padding-left: 10px">  dSolved</span></div>
 
 
-          </div>
-          <div class="col-md-8">
-            <h2>සෞම්‍ය යෝජනාවක් ඒකමතිකව සම්මත වේවි -නීතිඥ සුදර්ශන ගුණවර්ධන</h2>
-            <h5><span>Jun 27, 2014</span> </h5>
-            <br/>
-          </div>
-
-
-
-        </div>
-        <div class="panel-body">
-          <div class="col-md-4"></div>
-          <div class="col-md-8">
-
-            <p style="text-justify: distribute">ලංකාව සම්බන්ධයෙන් පසුගිය කාලේ ජාත්‍යන්තර වේදිකාවේ තිබුණු මතය සෑහෙන්න වෙනස්වෙලා තිබෙන බවක් පෙනෙනවා. නමුත් ඒකට ඉතිහාසයක් තියෙනවා නේද? යුද්ධය සම්බන්ධයෙන් 1994 දක්වා යම් ප‍්‍රමාණයකට බලපෑමක් ගේන්න උත්සාහ කළාට ඒක සාර්ථක වුණේ නැහැ. 94න් පස්සේ ආපු ආණ්ඩුව මානව හිමිකම් හිතවාදී ප‍්‍රතිපත්තියක් තමයි ගෙනිච්චේ. විවිධ ජාත්‍යන්තර සම්මුතිවලට අත්සන් කරලා එහෙම මානව හිමිකම් වාර්තාවත් හොඳ කරගත්තා. ඒ නිසා <a href="#">[continue reading…]</a></p>
-            <div class="pull-right">
-              <img src="images/commnet.png"class="grow"> <span>5</span>
-              <!--   <img src="images/vote.png"class="grow"> <span></span>-->
-              <img src="images/upvote.png"class="grow"> <span>200</span>
-              <img src="images/downvote.png"class="grow"> <span>12</span>
+            </div>
+            <div class="col-md-8">
+              <h2>සෞම්‍ය යෝජනාවක් ඒකමතිකව සම්මත වේවි -නීතිඥ සුදර්ශන ගුණවර්ධන</h2>
+              <h5><span>Jun 27, 2014</span> </h5>
+              <br/>
             </div>
 
 
-          </div>
 
-        </div>
-        <div class="panel-footer panel-danger">
-          <!--<button type="button" class="[ btn btn-default ]">+1</button>
-          <button type="button" class="[ btn btn-default ]">
+          </div>
+          <div class="panel-body">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+
+              <p style="text-justify: distribute">ලංකාව සම්බන්ධයෙන් පසුගිය කාලේ ජාත්‍යන්තර වේදිකාවේ තිබුණු මතය සෑහෙන්න වෙනස්වෙලා තිබෙන බවක් පෙනෙනවා. නමුත් ඒකට ඉතිහාසයක් තියෙනවා නේද? යුද්ධය සම්බන්ධයෙන් 1994 දක්වා යම් ප‍්‍රමාණයකට බලපෑමක් ගේන්න උත්සාහ කළාට ඒක සාර්ථක වුණේ නැහැ. 94න් පස්සේ ආපු ආණ්ඩුව මානව හිමිකම් හිතවාදී ප‍්‍රතිපත්තියක් තමයි ගෙනිච්චේ. විවිධ ජාත්‍යන්තර සම්මුතිවලට අත්සන් කරලා එහෙම මානව හිමිකම් වාර්තාවත් හොඳ කරගත්තා. ඒ නිසා <a href="#">[continue reading…]</a></p>
+              <div class="pull-right">
+                <img src="images/commnet.png"class="grow"> <span>5</span>
+                <!--   <img src="images/vote.png"class="grow"> <span></span>-->
+                <img src="images/upvote.png"class="grow"> <span>200</span>
+                <img src="images/downvote.png"class="grow"> <span>12</span>
+              </div>
+
+
+            </div>
+
+          </div>
+          <div class="panel-footer panel-danger">
+            <!--<button type="button" class="[ btn btn-default ]">+1</button>
+            <button type="button" class="[ btn btn-default ]">
             <span class="[ glyphicon glyphicon-share-alt ]"></span>
           </button>
           <div class="input-placeholder">Add a comment...</div>-->
@@ -286,9 +407,10 @@
 
 
 
-  </div>
+    </div>
 
-</div>
+
+  </div>
 
 
 
@@ -303,7 +425,7 @@
 
           <div class="panel-heading">
 
-<h3>Event</h3>
+            <h3>Event</h3>
 
           </div>
           <div class="panel-body">
