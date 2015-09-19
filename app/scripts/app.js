@@ -8,18 +8,13 @@
  *
  * Main module of the application.
  */
-
- 
-
-
 var routerApp = angular.module('talkApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'infinite-scroll'
+    'ngTouch'
   ]);
 
 routerApp.config(function ($routeProvider) {
