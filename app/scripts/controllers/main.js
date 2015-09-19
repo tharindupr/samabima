@@ -16,6 +16,19 @@ angular.module('talkApp')
       'Karma'
     ];
 
+    $http({
+      method: "GET",
+      url: "https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1"
+    }).success(function(data, status, header, config){
+      
+      // returned data contains an array of 2 sentences
+      for(line in data){
+        newItem = ($scope.items.length+1)+". "+data[line];
+        $scope.items.push(newItem);
+      }
+      $scope.loading = false;
+    });
+
    $scope.images = [1, 2, 3, 4, 5, 6, 7, 8];
 
   $scope.loadMore = function() {
