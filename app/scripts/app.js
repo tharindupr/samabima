@@ -15,8 +15,7 @@ var routerApp = angular.module('talkApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'infinite-scroll',
-    'ngTagsInput', 'ngResource'
+    'infinite-scroll'
 
   ]);
 
@@ -52,6 +51,7 @@ routerApp.config(function ($routeProvider) {
         controller: 'ProfileCtrl',
         controllerAs: 'profile'
       })
+
       .otherwise({
         redirectTo: '/'
       });
