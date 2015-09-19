@@ -82,21 +82,25 @@ body {
 <script type="text/javascript">
 $('#status_message').autogrow();
 </script>
-<form style="display:none" id="status_box" action="#" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
+<div ng-controller="post">
+<form ng-submit='postdata()' style="display:none" id="status_box"  method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
   <ul class="post-types">
   </ul>
   <div class="share">
     <div class="panel panel-default">
       <div class="panel-heading">Start a Discussion</div>
       <div class="panel-body">
-        <input type="text" class="form-control message" placeholder="Title"></input>
+        <input type="text" class="form-control message" placeholder="Title" ng-model="title" required></input>
         <div class="">
-          <textarea name="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 62px; overflow: hidden;" placeholder="What's on your mind ?"></textarea>
+          <textarea name="message" ng-model="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 62px; overflow: hidden;" placeholder="What's on your mind ?" required></textarea>
         </div>
         <div>
 
-          <input type="text" class="form-control message" placeholder="Tags"></input>
+          <input type="text" ng-model="tags" class="form-control message" placeholder="Tags"></input>
         </div>
+        <tags-input ng-model="tags">
+      <auto-complete source="loadTags($query)"></auto-complete>
+    </tags-input>
       </div>
       <div class="panel-footer">
         <div class="row">
@@ -104,14 +108,14 @@ $('#status_message').autogrow();
             <div class="form-group">
               <div class="btn-group" >
                 <button type="button" class="btn btn-default"><i class="fa fa-map-marker"></i> Location</button>
-                <button type="button" class="btn btn-default"><i class="fa fa-picture-o"></i> Attachment</button>
-                <label style="padding-left: 30px; vertical-align: -webkit-baseline-middle;" class="checkbox-inline"><input type="checkbox" value="">Post as annonymous </label>
+                <button type="button" class="btn btn-default" ng-click='postdata()'><i class="fa fa-picture-o"></i> Attachment</button>
+                <label style="padding-left: 30px; vertical-align: -webkit-baseline-middle;" class="checkbox-inline"><input type="checkbox" ng-model='anonymouse'  value="a">Post as annonymous </label>
               </div>
             </div>
           </div>
           <div class="col-md-3" style="text-align:right">
             <div class="form-group" >
-              <input type="submit" name="submit" value="Post" class="btn btn-primary" style="width: 100%;">
+              <input type="submit"  name="submit" value="Post" class="btn btn-primary" style="width: 100%;">
             </div>
           </div>
         </div>
@@ -120,7 +124,7 @@ $('#status_message').autogrow();
   </div>
 </div>
 </form>
-
+</div>
 <div class="row" style="    margin-left: 14px;
     margin-right: 14px;">
 
