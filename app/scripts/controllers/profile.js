@@ -19,8 +19,10 @@ angular.module('talkApp')
     $scope.problem ="";
     $scope.comments ="";
     $scope.reputation ="";
+    $scope.iswatch = false;
 
     function init() {
+      $scope.iswatch = true;
       $scope.profile = "active in";
       if (!$scope.$$phase)
         $scope.$apply();
@@ -62,6 +64,13 @@ angular.module('talkApp')
       }
 
     }
-    init();
+    $scope.$watch('profile', function() {
+    if( $scope.iswatch === false){
+        init();
+    }
+    });
+
+
+
 
   });
