@@ -15,7 +15,8 @@ var routerApp = angular.module('talkApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'infinite-scroll'
+    'infinite-scroll',
+    'ngTagsInput', 'ngResource'
 
   ]);
 
