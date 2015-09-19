@@ -11,8 +11,10 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="../bower_components/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss">
     <!-- endbuild -->
   </head>
   <body ng-app="talkApp">
@@ -42,6 +44,12 @@
               <li><a ng-href="#/profile">Profile</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/settings">Contact</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+              <li><a href="javascript:postToggle()">Add Post</a></li>
+              <li><a href="">Logout</a></li>
+              <li><a href="">Login</a></li>
             </ul>
           </div>
         </div>
@@ -59,6 +67,11 @@
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script type="text/javascript">
+      function postToggle() {
+        $("#status_box").slideToggle();
+      }
+    </script>
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
@@ -79,8 +92,10 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-    <script src="bower_components/autogrow/autogrow.js"></script><script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>    <!-- endbower -->
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/ng-infinite-scroll/ng-infinite-scroll.js"></script>
+    <script src="bower_components/autogrow/autogrow.js"></script>
+    <!-- endbower -->
     <!-- endbuild -->
     <script src="scripts/ng-infinite-scroll.min.js"></script>
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
