@@ -24,6 +24,9 @@ angular.module('talkApp')
       $scope.images.push(last + i);
     }
   };
+
+    $('#status_message').autogrow();
+
 });
 
 
