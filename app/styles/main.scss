@@ -254,4 +254,34 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   border-bottom-right-radius:50px;
   background:#333;
   float:right
+
+
+}
+
+.grow {
+  display:inline-block;
+  border:0;
+  width:30px;
+  height:30px;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+.grow:hover {
+
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.25);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.25);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.25);
+  transition: all 200ms ease-in;
+  transform: scale(1.25);
 }
