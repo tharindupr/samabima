@@ -82,20 +82,21 @@ body {
 <script type="text/javascript">
   $('#status_message').autogrow();
 </script>
+      <div ng-controller='post'>
       <form style="display:none" id="status_box" action="#" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
         <ul class="post-types">
         </ul>
         <div class="share">
           <div class="panel panel-default">
-            <div class="panel-heading">Start a Discussion</div>
+            <div class="panel-heading">Start a Discussion{{hello}}</div>
             <div class="panel-body">
-              <input type="text" class="form-control message" placeholder="Title"></input>
+              <input type="text" class="form-control message" placeholder="Title" ng-bind="title"></input>
               <div class="">
-                <textarea name="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 62px; overflow: hidden;" placeholder="What's on your mind ?"></textarea>
+                <textarea name="message" ng-bind="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 62px; overflow: hidden;" placeholder="What's on your mind ?"></textarea>
               </div>
               <div>
                 
-                <input type="text" class="form-control message" placeholder="Tags"></input>
+                <input type="text" ng-bind="tags" class="form-control message" placeholder="Tags"></input>
               </div>
             </div>
             <div class="panel-footer">
@@ -120,6 +121,7 @@ body {
         </div>
       </div>
     </form>
+    </div>
 </div>
 
 <div class="jumbotron">
