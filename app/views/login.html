@@ -67,4 +67,14 @@
                
                 
          </div> 
+
+
+
+         <div  ng-controller='numbersController'>
+        <div infinite-scroll='loadMore()' infinite-scroll-distance='2'>
+        <img class="tile" ng-repeat='n in numbers' ng-src='http://placehold.it/100x100&text={{n}}'>
+        </div>
+        </div>
+
+        
     </div>
