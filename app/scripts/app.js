@@ -27,7 +27,7 @@ routerApp.config(function ($routeProvider) {
         controllerAs: 'main'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
+        templateUrl: 'views/settings.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
