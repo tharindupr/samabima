@@ -70,11 +70,19 @@ body {
 .privacy-dropdown {
   width: 100px;
 }
+
+#status_box{
+  top: 44px;
+    width: 40%;
+    right: 0px;
+    position: fixed;
+    z-index: 2000;
+}
 </style>
 <script type="text/javascript">
   $('#status_message').autogrow();
 </script>
-      <form action="#" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
+      <form id="status_box" action="#" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
         <ul class="post-types">
         </ul>
         <div class="share">
