@@ -178,9 +178,9 @@ $('#status_message').autogrow();
                 <div class="col-md-9" style="color:#858484;">
                   <p style="text-justify: distribute">{{data["content"].split(" ").slice(0,50).join(" ")}}<a href="#/post/{{data['post_id']}}">[continue reading…]</a></p>
                   <div class="pull-right">
-                    <span  style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-comment-o"></i> {{data['comment_count']}}</span>
-                    <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-up"></i> {{data['upvote_count']}}</span>
-                    <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-down"></i> {{data['downvote_count']}}</span>
+                    <span  style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-comment-o post-control"></i> {{data['comment_count']}}</span>
+                    <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-up post-control"></i> {{data['upvote_count']}}</span>
+                    <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-down post-control"></i> {{data['downvote_count']}}</span>
                   </div>
                 </div>
               </div>
