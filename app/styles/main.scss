@@ -161,7 +161,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 .profile-detail-container{
   padding-top: 20px;
-  padding-right: 10%;
+
 }
 #profile-content-title{
   padding: 15px 0px 15px 70px;
@@ -198,9 +198,25 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 .profile-detail-container .glyphicon-question-sign, .glyphicon-ok-sign, .glyphicon-comment, .glyphicon-tower {
   font-size: 25px;
-  color: darkgray;
+
   padding-bottom: 30px;
 }
+
+.glyphicon-question-sign{
+  color: lighten(#ff0000, 20%)
+}
+
+.glyphicon-ok-sign{
+  color: lighten(green, 20%)
+}
+
+.glyphicon-comment{
+  color: lighten(blue, 20%)
+}
+.glyphicon-tower{
+  color: lighten(orange, 5%)
+}
+
 #problem-desc{
   font-weight: 500;
   height: 3em;
@@ -212,15 +228,21 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   font-weight: 500;
   color: gray;
 }
+.greencol{
+  color: chartreuse;
+}
+.badge{
+  font-size: 9px;
+}
 #problem-tags .badge{
   border:1px solid gray;
 }
 .profile-detail-container a .badge:hover{
   color: gray;
-  background: white;
+  background: lighten(gray, 20%)
 }
 .profile-count-box{
-  font-size: 11px;
+  font-size: 9px;
   text-align: center;
   border: 1px solid #D8D8D8;
   margin: 5px;
@@ -361,7 +383,6 @@ body {
 .privacy-dropdown {
   width: 100px;
 }
-
 #status_box{
   top: 44px;
   width: 40%;
@@ -373,3 +394,50 @@ body {
 .brand-top{
   margin-top: 10px;
 }
+.nav-tabs{
+  cursor: pointer;
+}
+
+
+#customBtn {
+  display: inline-block;
+  background: #F44336;
+  color: white;
+  width: 175px;
+  border-radius: 5px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+#customBtn:hover{
+  background-color: #d13c31;
+  border: 1px solid #be3c31;
+}
+
+#customBtn:hover {
+  cursor: pointer;
+}
+span.label {
+  font-weight: bold;
+}
+span.icon {
+  display: inline-block;
+  vertical-align: middle;
+  text-align:center;
+  padding-top:8px;
+  width: 40px;
+  height: 32px;
+}
+span.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 42px;
+  font-size: 14px;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
+}
+
+#gSignInWrapper{
+  margin-left: -29px;
+}
+

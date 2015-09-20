@@ -19,11 +19,16 @@ angular.module('talkApp')
     $scope.problem ="";
     $scope.comments ="";
     $scope.reputation ="";
+    $scope.isProfileActive =false;
 
     function init() {
-      $scope.profile = "active in";
-      if (!$scope.$$phase)
-        $scope.$apply();
+
+      if($scope.isProfileActive === false){
+        $scope.isProfileActive = true;
+        $scope.profile = "active in";
+      }
+
+
     }
 
     function clearTabClass() {
@@ -62,6 +67,12 @@ angular.module('talkApp')
       }
 
     }
-    init();
+
+    $scope.$watch('profile', function() {
+    //  $scope.profile = "active in";
+     init();
+    });
+
+  //  init();
 
   });
