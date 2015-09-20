@@ -52,6 +52,11 @@ routerApp.config(function ($routeProvider) {
         controller: 'ProfileCtrl',
         controllerAs: 'profile'
       })
+      .when('/admin', {
+        templateUrl: 'views/admin.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile'
+      })
       .otherwise({
         redirectTo: '/'
       });

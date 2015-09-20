@@ -102,8 +102,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.2.28/angular-resource.min.js"></script>
     <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>
-    
- 
+
+
     <!-- endbower -->
     <!-- endbuild -->
     <script src="scripts/ng-infinite-scroll.min.js"></script>
@@ -117,7 +117,27 @@
         <script src="scripts/services/notificationservice.js"></script>
         <script src="scripts/services/ajaxservice.js"></script>
 
+    <script>
+      function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'https://www.googleapis.com/auth/plus.login',
+          'width': 200,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+    </script>
 
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
     <!-- endbuild -->
 </body>
