@@ -12,7 +12,6 @@ $scope.ta=[]
 
 
 
-
     $scope.postdata = function() {
 
       for(i in $scope.tags)
