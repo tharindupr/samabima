@@ -88,20 +88,25 @@ $('#status_message').autogrow();
   </ul>
   <div class="share">
     <div class="panel panel-default">
-      <div class="panel-heading">Start a Discussion</div>
+      <div class="panel-heading">Start a Discussion </div>
       <div class="panel-body">
         <input type="text" class="form-control message" placeholder="Title" ng-model="title" required></input>
         <div class="">
           <textarea name="message" ng-model="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 62px; overflow: hidden;" placeholder="What's on your mind ?" required></textarea>
         </div>
         <div>
+         <div>
+         <input type="text" class="form-control message" placeholder="Tags" ng-model="tags1" required></input>
+          <tags-input ng-model="tags"></tags-input>
+         
+        
+        <div>
 
-          <input type="text" ng-model="tags" class="form-control message" placeholder="Tags"></input>
         </div>
-        <tags-input ng-model="tags">
-      <auto-complete source="loadTags($query)"></auto-complete>
-    </tags-input>
+
       </div>
+
+
       <div class="panel-footer">
         <div class="row">
           <div class="col-md-9">
@@ -109,7 +114,8 @@ $('#status_message').autogrow();
               <div class="btn-group" >
                 <button type="button" class="btn btn-default"><i class="fa fa-map-marker"></i> Location</button>
                 <button type="button" class="btn btn-default" ng-click='postdata()'><i class="fa fa-picture-o"></i> Attachment</button>
-                <label style="padding-left: 30px; vertical-align: -webkit-baseline-middle;" class="checkbox-inline"><input type="checkbox" ng-model='anonymouse'  value="a">Post as annonymous </label>
+                <label style="padding-left: 30px; vertical-align: -webkit-baseline-middle;" class="checkbox-inline">
+                <input type="checkbox" ng-model='anonymouse'  value="a">Post as annonymous </label>
               </div>
             </div>
           </div>
