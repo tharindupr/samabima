@@ -96,11 +96,10 @@ $('#status_message').autogrow();
         </div>
         <div>
          <div>
-         <input type="text" class="form-control message" placeholder="Tags" ng-model="tags1" required></input>
-          <tags-input ng-model="tags"></tags-input>
 
-
-        <div>
+         <tags-input ng-model="tags">
+                 <auto-complete source="loadTags($query)"></auto-complete>
+          </tags-input>        <div>
 
         </div>
 
@@ -164,7 +163,7 @@ $('#status_message').autogrow();
                     <h4>{{data["display_name"]}}</h4>
                   </div>
                   <div class="row">
-                    <span class="label label-success" style="width: 10px; margin-right:1px" ng-repeat="t in tags[data['post_id']]" > {{t['tag_name']}}</span>
+                    <span class="label label-success" style="width: 10px; margin-right:1px" ng-repeat="t in tagss[data['post_id']]" > {{t['tag_name']}}</span>
                     &nbsp;&nbsp;<br>
                   </div>
                 </div>

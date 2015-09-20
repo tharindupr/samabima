@@ -22,7 +22,7 @@ angular.module('talkApp')
     }).success(function(data, status, header, config){
       
           $scope.json=data;
-          $scope.tags=new Array();
+          $scope.tagss=new Array();
           for(var i = 0; i < data.length; i++)
 
           {
@@ -33,7 +33,7 @@ angular.module('talkApp')
                 {
                   
                 
-                $scope.tags[d['post_id']]=d;
+                $scope.tagss[d['post_id']]=d;
 
                    
                 });
