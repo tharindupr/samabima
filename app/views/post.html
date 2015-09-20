@@ -1,0 +1,56 @@
+<div class="container"  ng-controller="postCtrl">
+  <div class="row">
+        <div class="col-lg-10">
+          <div class="panel panel-default">
+            <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-1">
+              <div class="vote"><span class="glyphicon glyphicon-chevron-up"></span></div>
+              <div class="vote-number"><h2>23</h2></div>
+              <div class="vote"><span class="glyphicon glyphicon-chevron-down"></span></div>
+              <br>
+              <div class="vote">
+                <h4><span class="glyphicon glyphicon-heart"></span></h4>
+              </div>
+            </div>
+            <div class="col-lg-8"><!-- image-->
+              <div class="row">
+                <h3 id="topic">  {{json.title}}</h3>
+              </div>
+              <div class="row" style="color:#858585">
+                       {{json.content}}
+              </div>
+            </div>
+            <div id="post-data" class="col-lg-3" >
+              <img src="{{json.thumbnail_url}}" width="100%" alt="" />
+              <div class="post-data"> <!-- post owner -->
+                <span class="glyphicon glyphicon-user"></span>
+                <a href="#">{{json.display_name}}</a>
+              </div>
+              <div class="post-data"><!-- posted date -->
+                <span class="glyphicon glyphicon-calendar"></span>{{json.created_date}}
+
+              </div>
+              <!-- <div class="post-data last">
+                <span class="glyphicon glyphicon-time"></span> 8:29 AM
+
+              </div> -->
+            </div>
+          </div>
+
+
+            <br>
+              </div>
+      </div>
+    </div>
+    <div class="row"> <!-- post comments -->
+      <div class="col-md-10">                        <!-- <div style="border-bottom:1px solid #DBDBDB"></div> -->
+      <br>
+      <form action="" method="get">
+        <textarea id="cmnt-box" class="form-control" name="cmnt"></textarea><br>
+        <input type="button" class="btn pull-right btn-primary" value="Comment">
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
