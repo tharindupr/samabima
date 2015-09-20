@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss">
     <link href="../bower_components/ng-tags-input/ng-tags-input.css">
     <link href="../bower_components/ng-tags-input/ng-tags-input.bootstrap.css">
-
+	    <link rel="stylesheet" href="../bower_components/ng-tags-input/ng-tags-input.css">    
     <!-- endbuild -->
   </head>
   <body ng-app="talkApp" style="font-family:'noto sans'; background-color: #eee">
@@ -68,7 +68,7 @@
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Hexmatter and Rush team</p>
+        <!-- <p><span class="glyphicon glyphicon-heart"></span> from the Talk team</p> -->
       </div>
     </div>
 
@@ -103,7 +103,6 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/ng-infinite-scroll/ng-infinite-scroll.js"></script>
     <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
-    <script src="https://apis.google.com/js/api:client.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <script src="scripts/ng-infinite-scroll.min.js"></script>
@@ -117,35 +116,8 @@
         <script src="scripts/services/notificationservice.js"></script>
         <script src="scripts/services/ajaxservice.js"></script>
         <script src="scripts/controllers/post.js"></script>
+        <script src="scripts/controllers/postCtrl.js"></script>
 
-
-    <script>
-      var googleUser = {};
-      var startApp = function() {
-        gapi.load('auth2', function(){
-          // Retrieve the singleton for the GoogleAuth library and set up the client.
-          auth2 = gapi.auth2.init({
-            client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
-            cookiepolicy: 'single_host_origin',
-            // Request scopes in addition to 'profile' and 'email'
-            //scope: 'additional_scope'
-          });
-          attachSignin(document.getElementById('customBtn'));
-        });
-      };
-
-      function attachSignin(element) {
-        console.log(element.id);
-        auth2.attachClickHandler(element, {},
-          function(googleUser) {
-            document.getElementById('name').innerText = "Signed in: " +
-            googleUser.getBasicProfile().getName();
-          }, function(error) {
-            alert(JSON.stringify(error, undefined, 2));
-          });
-      }
-      startApp();
-    </script>
 
     <!-- endbuild -->
 </body>

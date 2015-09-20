@@ -52,7 +52,11 @@ routerApp.config(function ($routeProvider) {
         controller: 'ProfileCtrl',
         controllerAs: 'profile'
       })
-
+      .when('/post/:id', {
+        templateUrl: 'views/post.html',
+        controller: 'postCtrl',
+        controllerAs: 'postCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
