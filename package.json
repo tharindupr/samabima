@@ -1,0 +1,17 @@
+{
+  "name": "hexmatter",
+  "version": "1.0.0",
+  "description": "Hexmatter - Project සදිසි",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "W A D Dinuka Wanasinghe",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.1",
+    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-usemin": "^3.1.1"
+  }
+}
