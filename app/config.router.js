@@ -1,4 +1,4 @@
-﻿duse strict';
+﻿'use strict';
 angular.module('app')
     .run(
         [
@@ -15,12 +15,34 @@ angular.module('app')
             function($stateProvider, $urlRouterProvider) {
 
                 $urlRouterProvider
-                    .otherwise('/app/dashboard');
+                    .otherwise('/app/feed');
                 $stateProvider
                     .state('app', {
                         abstract: true,
                         url: '/app',
                         templateUrl: 'views/layout.html'
+                    })
+                    .state('app.feed', {
+                        url: '/feed',
+                        templateUrl: 'views/feed.html',
+                        ncyBreadcrumb: {
+                            label: 'Feed',
+                            description: ''
+                        },
+                        resolve: {
+                            deps: [
+                                '$ocLazyLoad',
+                                function($ocLazyLoad) {
+                                    return $ocLazyLoad.load({
+                                        serie: true,
+                                        files: [
+                                            'app/controllers/feed.js',
+                                          
+                                        ]
+                                    });
+                                }
+                            ]
+                        }
                     })
                     .state('app.dashboard', {
                         url: '/dashboard',

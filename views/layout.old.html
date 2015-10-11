@@ -9,10 +9,16 @@
 <div class="main-container container-fluid">
     <!-- Page Container -->
     <div class="page-container">
-       
+        <!-- Page Sidebar -->
+        <div class="page-sidebar {{settings.fixed.sidebar ? 'sidebar-fixed' : ''}}" id="sidebar" data-ng-include=" 'views/partials/sidebar.html' ">
+        </div>
+        <!-- /Page Sidebar -->
+        <!-- Chat Bar -->
+        <div id="chatbar" class="page-chatbar" data-ng-include=" 'views/partials/chatbar.html' ">
+        </div>
         <!-- /Chat Bar -->
         <!-- Page Content -->
-        
+        <div class="page-content">
             <!-- Page Breadcrumb -->
             <div class="page-breadcrumbs {{settings.fixed.breadcrumbs ? 'breadcrumbs-fixed' : ''}}" data-ng-include=" 'views/partials/breadcrumbs.html' ">
             </div>
@@ -26,7 +32,8 @@
                 <!-- Your Content Goes Here -->
             </div>
             <!-- /Page Body -->
-      
+        </div>
+        <!-- /Page Content -->
     </div>
     <!-- /Page Container -->
     <!-- Main Container -->
