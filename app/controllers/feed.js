@@ -9,24 +9,13 @@ controller('FeedCtrl', function ($scope,$http) {
           $scope.json=data;
           $scope.tagss=new Array();
          
-
-          for(var i = 0; i < data.length; i++)
-              console.log(data[i]);
-          {
-      /*      $http({
-                  method: "GET",
-                  url: "http://192.168.0.108/samabima/Samabima/public/post/1"+"/tags"
-                }).success(function(d, s, h, c)
-                {
-                  
-                console.log(d);
-                //$scope.tagss[d['post_id']]=d;
-
-                   
-                });*/
-
-
-          }
+         angular.forEach($scope.json, function(json){
+  // Here, the lang object will represent the lang you called the request on for the scope of the function
+            $http.get('http://hexmatter.cloudapp.net/post/1/tags', function(res) {
+              // Do whatever you want with lang here. lang will be the same object you called the request with as it resides in the same 'closure'
+              console.log(res);
+            });
+          });
 
 
     });
