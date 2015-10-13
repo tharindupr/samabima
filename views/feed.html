@@ -43,7 +43,19 @@
         <div>
             {{post["display_name"]}}
         </div>
+
+
+        <div ng-controller="FeedTagCtrl" ng-init="postid=post['post_id']">
+        <span  ng-repeat="i in tag">
+        <span class="label label-success">
+        {{i['tag_name']}}
+        <span>
+        </span>
+       
         </div>
+        </div>
+
+
         <div class="col-lg-8 col-sm-8">
         <h3 tyle="font-size:20px">{{post["title"]}}</h3>
         <h5><span>{{ post["created_date"]}}</span> </h5>
