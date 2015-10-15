@@ -1,30 +1,59 @@
 
+
+
 <div ng-controller="FeedCtrl">
 <div class="row">
-<div class="col-lg-3 col-sm-3">
+<div class="col-lg-2 col-sm-2">
 </div>
-<div class="col-lg-6 col-sm-6 col-xs-12">
-                <div class="widget">
-                    <div class="widget-header bordered-bottom bordered-blue">
-                        <span class="widget-caption">Basic Form</span>
-                    </div>
-                    <div class="widget-body">
-                        <div>
-                            <form role="form">
+<div class="col-lg-8 col-sm-8 col-xs-12">
+
+        <div class="row">
+            <div class="col-lg-8 col-sm-8 col-xs-12" ng-controller="FeedPostCtrl">
+       
+                <tabset>
+                    <tab heading="Add Post">
+                        <form role="form">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Post here</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                    <label for="exampleInputEmail1">Start a discussion</label>
+                                        
+                                    <input type="text" class="form-control" id="title" ng-model="title" placeholder="Title">
+                                         
+                                    <textarea  msd-elastic  class="form-control" id="content" placeholder="Content" ng-model="content"></textarea>
+
+                                  
+                                    
+                                    <tags-input ng-model="tags">
+                                        
+                                    </tags-input>
+                                    <label>
+                                        <input type="checkbox" class="inverted" checked="checked" ng-model="anonymous">
+                                        <span class="text">Post as anonymous</span>
+                                    </label>
                                 </div>
                                
                             
-                                <button type="submit" class="btn btn-blue pull-right">Submit</button>
+                                <button class="btn btn-blue pull-right" ng-click="postdata(title,content)">Post</button>
                                <div><br><br></div>
                             </form>
-                        </div>
-                    </div>
-                </div>
+                    </tab>
+                    <tab heading="Add Poll">
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    </tab>
+                    <tab heading="Add Event">
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    </tab>
+                </tabset>
+                <div class="horizontal-space"></div>
+
+            </div>
+            
+        </div>
+
+
+
+               
 </div>
-<div class="col-lg-3 col-sm-3">
+<div class="col-lg-2 col-sm-2">
 </div>
 </div>
 <div class="row">
@@ -83,7 +112,7 @@
     </div>
 </div>
 
-<div class="col-lg-2 col-sm-3">
+<div class="col-lg-2 col-sm-2">
 
 </div>
 </div>
