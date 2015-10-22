@@ -1,3 +1,8 @@
-/**
- * Created by dhanushka on 10/22/15.
- */
+'use strict';
+
+app.
+    controller('ModCtrl', function ($scope) {
+
+        $scope.headertxt = "Moderator Panel";
+        $scope.txt = "Under development..";
+    });
