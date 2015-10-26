@@ -10,7 +10,5 @@ angular.module('app', [
     'ncy-angular-breadcrumb',
     'ui.bootstrap',
     'ui.utils',
-    'oc.lazyLoad',
-    'monospaced.elastic',
-    'ngTagsInput'
+    'oc.lazyLoad'
 ]);

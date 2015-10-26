@@ -31,45 +31,5 @@ app.controller('FeedTagCtrl',function($scope,$http){
 
 });
   
-
-app.controller('FeedPostCtrl',function($scope,$http){
-    
-    
-       
-     $scope.content="";
-
-
-     $scope.tags = [];
-
-     $scope.ta=[];
-      $scope.postdata = function(t,c) {
-
-            for(i in $scope.tags)
-              {
-             
-                $scope.ta[i]=$scope.tags[i]['text'];
-              }
-          console.log(t);
-            
-            var post = {
-                title : t,
-                content : c,
-                is_anonymouse : $scope.anonymous,
-                tags : $scope.ta ,
-                post_type_id: 1,
-                owner_id : 1
-                //tags : $scope.title
-
-            };  
-            console.log(post);
-            var res = $http.post("http://hexmatter.cloudapp.net/post/", post);
-            res.success(function(data, status, headers, config) {
-              location.reload();
-              
-            });
-
-         }      
-});
   
-
 
