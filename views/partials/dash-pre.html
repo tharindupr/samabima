@@ -1,4 +1,4 @@
-﻿<div ng-controller="DashboardCtrl">
+<div ng-controller="DashboardCtrl">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="row">
@@ -71,156 +71,381 @@
     </div>
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="orders-container">
-                <div class="orders-header">
-                    <div class="row">
-                        <div class="col-lg-10 col-md-10">
-                            <h6>Latest Posts</h6>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="dashboard-box">
+                        <div class="box-header">
+                            <div class="deadline">
+                                Remaining Days: 109
+                            </div>
                         </div>
-                        <div class="col-lg-2 col-md-2">
-                            <input type="button" class="btn btn-info" value="Approve Bulk">
+                        <div class="box-progress">
+                            <div class="progress-handle">day 20</div>
+                            <progressbar class="progress-xs progress-no-radius bg-whitesmoke" value="20"></progressbar>
+                        </div>
+                        <div class="box-tabbs">
+                            <tabset flat="true" justified="true">
+                                <tab heading="Real-Time">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div flot-chart-realtime class="chart chart-lg no-margin"></div>
+                                        </div>
+                                    </div>
+                                </tab>
+                                <tab heading="Visits">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div height="250px" style="width: 100%; display: block;" ui-jq="plot" ui-options="{{visitChartData}}, {{visitChartOptions}}"
+                                                 class="chart chart-lg no-margin">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </tab>
+                                <tab heading="Bandwidth">
+                                    <div class="databox-sparkline bg-themeprimary">
+                                        <div id="dashboard-bandwidth-chart" style="height: 240px;" ui-jq="sparkline" ui-options="[500, 400, 100, 450, 300, 200, 100, 200], {type:'line', height:250, width:{{boxWidth}}, lineColor:'#fff', fillColor:'rgba(255,255,255,.2)', spotRadius:0, spotColor:'#fafafa', minSpotColor:'#fafafa', maxSpotColor:'#fafafa', highlightSpotColor:'#fff', highlightLineColor:'#fff', lineWidth:2  }"></div>
+                                    </div>
+                                </tab>
+                                <tab heading="Sales">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="databox databox-xlg databox-vertical databox-inverted databox-shadowed">
+                                                <div class="databox-top">
+                                                    <div class="databox-sparkline">
+                                                        <span ui-jq="sparkline" ui-options="[1,2,4,3,5,6,8,7,11,14,11,12], {type:'line', height:125, width:125, fillColor:'', lineColor:'{{settings.color.themeprimary}}', spotColor:'#fafafa', minSpotColor:'#fafafa' , maxSpotColor:'#ffce55', highlightSpotColor:'#ffce55' , highlightLineColor:'#ffce55', lineWidth:'1.5' , spotRadius:2 }"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="databox-bottom no-padding text-align-center">
+                                                    <span class="databox-number lightcarbon no-margin">224</span>
+                                                    <span class="databox-text lightcarbon no-margin">Sale Unit / Hour</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="databox databox-xlg databox-vertical databox-inverted databox-shadowed">
+                                                <div class="databox-top">
+                                                    <div class="databox-sparkline">
+                                                        <span ui-jq="sparkline" ui-options="[100,208,450,298,450,776,234,680,1100,1400,1000,1200], {type:'line', height:125, width:125, fillColor:'', lineColor:'{{settings.color.themefourthcolor}}', spotColor:'#fafafa', minSpotColor:'#fafafa' , maxSpotColor:'#8cc474', highlightSpotColor:'#8cc474' , highlightLineColor:'#8cc474', lineWidth:'1.5' , spotRadius:2 }"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="databox-bottom no-padding text-align-center">
+                                                    <span class="databox-number lightcarbon no-margin">7063$</span>
+                                                    <span class="databox-text lightcarbon no-margin">Income / Hour</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="databox databox-xlg databox-vertical databox-inverted databox-shadowed">
+                                                <div class="databox-top">
+                                                    <div class="databox-piechart">
+                                                        <div class="easyPieChart block-center" ui-jq="easyPieChart" ui-options="{ percent: 75, lineWidth: 8, barColor:'{{settings.color.themeprimary}}', trackColor: '#eee' , scaleColor:'#fff', size: 125, lineCap: 'butt', animate: 500 }"><span class="font-200"><i class="fa fa-gift themeprimary"></i></span></div>
+                                                        <div class="databox-bottom no-padding text-align-center">
+                                                            <span class="databox-number lightcarbon no-margin">9</span>
+                                                            <span class="databox-text lightcarbon no-margin">NEW ORDERS</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="databox databox-xlg databox-vertical databox-inverted  databox-shadowed">
+                                                <div class="databox-top">
+                                                    <div class="databox-piechart">
+                                                        <div class="easyPieChart block-center" ui-jq="easyPieChart" ui-options="{ percent: 40, lineWidth: 8, barColor:'{{settings.color.themethirdcolor}}', trackColor: '#eee' , scaleColor:'#fff', size: 125, lineCap: 'butt', animate: 500 }"><span class="white font-200"><i class="fa fa-tags themethirdcolor"></i></span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="databox-bottom no-padding text-align-center">
+                                                    <span class="databox-number lightcarbon no-margin">11</span>
+                                                    <span class="databox-text lightcarbon no-margin">NEW TICKETS</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </tab>
+                            </tabset>
+                            <div class="box-visits">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-4 col-xs-12">
+                                        <div class="notification">
+                                            <div class="clearfix">
+                                                <div class="notification-icon">
+                                                    <i class="fa fa-gift palegreen bordered-1 bordered-palegreen"></i>
+                                                </div>
+                                                <div class="notification-body">
+                                                    <span class="title">Kate birthday party</span>
+                                                    <span class="description">08:30 pm</span>
+                                                </div>
+                                                <div class="notification-extra">
+                                                    <i class="fa fa-calendar palegreen"></i>
+                                                    <i class="fa fa-clock-o palegreen"></i>
+                                                    <span class="description">at home</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4 col-xs-12">
+                                        <div class="notification">
+                                            <div class="clearfix">
+                                                <div class="notification-icon">
+                                                    <i class="fa fa-check azure bordered-1 bordered-azure"></i>
+                                                </div>
+                                                <div class="notification-body">
+                                                    <span class="title">Hanging out with kids</span>
+                                                    <span class="description">03:30 pm - 05:15 pm</span>
+                                                </div>
+                                                <div class="notification-extra">
+                                                    <i class="fa fa-clock-o azure"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4 col-xs-12">
+                                        <div class="notification">
+                                            <div class="clearfix">
+                                                <div class="notification-icon">
+                                                    <i class="fa fa-phone bordered-1 bordered-orange orange"></i>
+                                                </div>
+                                                <div class="notification-body">
+                                                    <span class="title">Meeting with Patty</span>
+                                                    <span class="description">01:00 pm</span>
+                                                </div>
+                                                <div class="notification-extra">
+                                                    <i class="fa fa-clock-o orange"></i>
+                                                    <span class="description">office</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <ul class="orders-list">
-                    <li class="order-item">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
-                                <div>
-                                    <input type="checkbox" value="approve">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                                <div class="item-booker">Ned Stards</div>
-                                <div class="item-time">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>10 minutes ago</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item-right">
-                                <div class="item-price">
-                                    <input type="button" class="btn btn-info" value="Approve">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="order-item">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
-                                <div>
-                                    <input type="checkbox" value="approve">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                                <div class="item-booker">Ned Stards</div>
-                                <div class="item-time">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>10 minutes ago</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item-right">
-                                <div class="item-price">
-                                    <input type="button" class="btn btn-info" value="Approve">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="order-item">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
-                                <div>
-                                    <input type="checkbox" value="approve">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                                <div class="item-booker">Ned Stards</div>
-                                <div class="item-time">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>10 minutes ago</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item-right">
-                                <div class="item-price">
-                                    <input type="button" class="btn btn-info" value="Approve">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="order-item">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
-                                <div>
-                                    <input type="checkbox" value="approve">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                                <div class="item-booker">Ned Stards</div>
-                                <div class="item-time">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>10 minutes ago</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item-right">
-                                <div class="item-price">
-                                    <input type="button" class="btn btn-info" value="Approve">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="order-item">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
-                                <div>
-                                    <input type="checkbox" value="approve">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                                <div class="item-booker">Ned Stards</div>
-                                <div class="item-time">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>10 minutes ago</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item-right">
-                                <div class="item-price">
-                                    <input type="button" class="btn btn-info" value="Approve">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="orders-footer">
-                    <a class="show-all" href=""><i class="fa fa-angle-down"></i> Show All</a>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="row">
-                        <div class="databox databox-lg databox-inverted radius-bordered databox-shadowed databox-graded databox-vertical">
-                            <div class="databox-top bg-palegreen no-padding">
-                                <div class="databox-stat white bg-palegreen font-120">
-                                    <i class="stat-icon fa fa-caret-down icon-xlg"></i>
-                                </div>
-                                <div class="horizontal-space space-lg"></div>
-                                <div class="databox-sparkline no-margin">
-                                    <span ui-jq="sparkline" ui-options="[7, 6, 5, 7, 9, 10, 8, 7, 6, 6, 4, 7, 8], {type:'bar', height:82, width:'100%', barColor:'#b0dc81', barWidth:10, barSpacing:5}"></span>
+            <div class="orders-container">
+                <div class="orders-header">
+                    <h6>Latest Orders</h6>
+                </div>
+                <ul class="orders-list">
+                    <li class="order-item">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
+                                <div class="item-booker">Ned Stards</div>
+                                <div class="item-time">
+                                    <i class="fa fa-calendar"></i>
+                                    <span>10 minutes ago</span>
                                 </div>
                             </div>
-                            <div class="databox-bottom no-padding">
-                                <div class="databox-row">
-                                    <div class="databox-cell cell-6 text-align-left">
-                                        <span class="databox-text">Posts Total</span>
-                                        <span class="databox-number">1451</span>
-                                    </div>
-                                    <div class="databox-cell cell-6 text-align-right">
-                                        <span class="databox-text">September</span>
-                                        <span class="databox-number font-70">27</span>
-                                    </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
+                                <div class="item-price">
+                                    <span class="currency">$</span>
+                                    <span class="price">400</span>
                                 </div>
                             </div>
                         </div>
+                        <a class="item-more" href="">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li class="order-item top">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
+                                <div class="item-booker">Steve Lewis</div>
+                                <div class="item-time">
+                                    <i class="fa fa-calendar"></i>
+                                    <span>2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
+                                <div class="item-price">
+                                    <span class="currency">$</span>
+                                    <span class="price">620</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="item-more" href="">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li class="order-item">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
+                                <div class="item-booker">John Ford</div>
+                                <div class="item-time">
+                                    <i class="fa fa-calendar"></i>
+                                    <span>Today 8th July</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
+                                <div class="item-price">
+                                    <span class="currency">$</span>
+                                    <span class="price">220</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="item-more" href="">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li class="order-item">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
+                                <div class="item-booker">Kim Basinger</div>
+                                <div class="item-time">
+                                    <i class="fa fa-calendar"></i>
+                                    <span>Yesterday 7th July</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
+                                <div class="item-price">
+                                    <span class="currency">$</span>
+                                    <span class="price">400</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="item-more" href="">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li class="order-item">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
+                                <div class="item-booker">Steve Lewis</div>
+                                <div class="item-time">
+                                    <i class="fa fa-calendar"></i>
+                                    <span>5th July</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
+                                <div class="item-price">
+                                    <span class="currency">$</span>
+                                    <span class="price">340</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="item-more" href="">
+                            <i></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="orders-footer">
+                    <a class="show-all" href=""><i class="fa fa-angle-down"></i> Show All</a>
+                    <div class="help">
+                        <a href=""><i class="fa fa-question"></i></a>
+                    </div>
                 </div>
-                <div class="row">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-sm-12 col-xs-12">
+            <div class="widget">
+                <div class="widget-header bordered-bottom bordered-themeprimary">
+                    <i class="widget-icon fa fa-tasks themeprimary"></i>
+                    <span class="widget-caption themeprimary">Task Board</span>
+                </div><!--Widget Header-->
+                <div class="widget-body no-padding">
+                    <div class="task-container">
+                        <div class="task-search">
+                            <span class="input-icon">
+                                <input type="text" class="form-control" placeholder="Search Tasks">
+                                <i class="fa fa-search gray"></i>
+                            </span>
+                        </div>
+                        <ul class="tasks-list">
+                            <li class="task-item">
+                                <div class="task-check">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                                <div class="task-state">
+                                    <span class="label label-yellow">
+                                        In Progress
+                                    </span>
+                                </div>
+                                <div class="task-time">1 hour ago</div>
+                                <div class="task-body">Ask to the sysadmins to install Python 3 on the server and run it</div>
+                                <div class="task-creator"><a href="">Cameron Hetfield</a></div>
+                                <div class="task-assignedto">assigned to you</div>
+                            </li>
+                            <li class="task-item">
+                                <div class="task-check">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                                <div class="task-state">
+                                    <span class="label label-orange">
+                                        Active
+                                    </span>
+                                </div>
+                                <div class="task-time">2 hours ago</div>
+                                <div class="task-body">Write documentation for the new API with test and deploy specifications</div>
+                                <div class="task-creator"><a href="">Behrang Nitsche</a></div>
+                                <div class="task-assignedto">assigned to you</div>
+                            </li>
+                            <li class="task-item">
+                                <div class="task-check">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text"></span>
+                                    </label>
+                                </div>
+                                <div class="task-state">
+                                    <span class="label label-palegreen">
+                                        Approved
+                                    </span>
+                                </div>
+                                <div class="task-time">yesterday</div>
+                                <div class="task-body">Code refactoring and rewriting silly codes and test it</div>
+                                <div class="task-creator"><a href="">David Fincher</a></div>
+                                <div class="task-assignedto">assigned to Kim</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--Widget Body-->
+            </div>
+
+        </div>
+        <div class="col-lg-8 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col=lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="databox databox-lg databox-inverted radius-bordered databox-shadowed databox-graded databox-vertical">
+                        <div class="databox-top bg-palegreen no-padding">
+                            <div class="databox-stat white bg-palegreen font-120">
+                                <i class="stat-icon fa fa-caret-down icon-xlg"></i>
+                            </div>
+                            <div class="horizontal-space space-lg"></div>
+                            <div class="databox-sparkline no-margin">
+                                <span ui-jq="sparkline" ui-options="[7, 6, 5, 7, 9, 10, 8, 7, 6, 6, 4, 7, 8], {type:'bar', height:82, width:'100%', barColor:'#b0dc81', barWidth:10, barSpacing:5}"></span>
+                            </div>
+                        </div>
+                        <div class="databox-bottom no-padding">
+                            <div class="databox-row">
+                                <div class="databox-cell cell-6 text-align-left">
+                                    <span class="databox-text">Sales Total</span>
+                                    <span class="databox-number">$23,657</span>
+                                </div>
+                                <div class="databox-cell cell-6 text-align-right">
+                                    <span class="databox-text">September</span>
+                                    <span class="databox-number font-70">$1,257</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col=lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="databox databox-lg databox-inverted radius-bordered databox-shadowed databox-graded databox-vertical">
                         <div class="databox-top bg-orange no-padding">
                             <div class="databox-stat white bg-orange font-120">
@@ -244,9 +469,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
+                </div>
+                <div class="col=lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="databox databox-lg databox-inverted radius-bordered databox-shadowed databox-graded databox-vertical">
                         <div class="databox-top bg-azure no-padding">
                             <div class="databox-stat white bg-azure font-120">
@@ -270,12 +495,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-lg-12 col-sm-12 col-xs-12">
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="widget">
