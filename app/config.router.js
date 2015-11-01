@@ -37,7 +37,7 @@ angular.module('app')
                                         serie: true,
                                         files: [
                                             'app/controllers/feed.js',
-                                            'node_modules/angular-elastic/elastic.js'
+                                       
                                           
                                         ]
                                     });
