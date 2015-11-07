@@ -1,0 +1,119 @@
+
+
+
+<div ng-controller="FeedCtrl">
+<div class="row">
+<div class="col-lg-2 col-sm-2">
+</div>
+<div class="col-lg-8 col-sm-8 col-xs-12">
+
+        <div class="row">
+            <div class="col-lg-8 col-sm-8 col-xs-12" ng-controller="FeedPostCtrl">
+       
+                <tabset>
+                    <tab heading="Add Post">
+                        <form role="form">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Start a discussion</label>
+                                        
+                                    <input type="text" class="form-control" id="title" ng-model="title" placeholder="Title">
+                                         
+                                    <textarea  msd-elastic  class="form-control" id="content" placeholder="Content" ng-model="content"></textarea>
+
+                                  
+                                    
+                                    <tags-input ng-model="tags">
+                                        
+                                    </tags-input>
+                                    <label>
+                                        <input type="checkbox" class="inverted" checked="checked" ng-model="anonymous">
+                                        <span class="text">Post as anonymous</span>
+                                    </label>
+                                </div>
+                               
+                            
+                                <button class="btn btn-blue pull-right" ng-click="postdata(title,content)">Post</button>
+                               <div><br><br></div>
+                            </form>
+                    </tab>
+                    <tab heading="Add Poll">
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                    </tab>
+                    <tab heading="Add Event">
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                    </tab>
+                </tabset>
+                <div class="horizontal-space"></div>
+
+            </div>
+            
+        </div>
+
+
+
+               
+</div>
+<div class="col-lg-2 col-sm-2">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-2 col-sm-2">
+</div>
+<div class="col-lg-7 col-sm-7 col-xs-12" >
+ 
+    <div class="well" ng-repeat="post in json">
+     <p>
+  
+     <div class="row">
+        <div class="col-sm-3">
+        <div class="row">
+        <img class="[ img-rounded pull-left ]" src="http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg" alt="Mouse0270" width="100px" height="100px" style="padding-left: 12px; padding-top: 4px" />
+        </div>
+        <div>
+            {{post["display_name"]}}
+        </div>
+
+
+        <div ng-controller="FeedTagCtrl" ng-init="postid=post['post_id']">
+        <span  ng-repeat="i in tag">
+        <span class="label label-primary">
+        {{i['tag_name']}}
+        <span>
+        </span>
+       
+        </div>
+        </div>
+
+
+        <div class="col-lg-8 col-sm-8">
+        <h3 tyle="font-size:20px">{{post["title"]}}</h3>
+        <h5><span>{{ post["created_date"]}}</span> </h5>
+        
+             <p style="text-justify: distribute">{{post["content"].split(" ").slice(0,50).join(" ")}}<a href="#">[continue reading…]</a></p>
+
+
+             <div class="pull-right">
+                    <span  style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-comment-o"></i> {{post['comment_count']}}</span>
+                    <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-up"></i> {{post['upvote_count']}}</span>
+                    <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-down"></i> {{post['downvote_count']}}</span>
+                  </div>
+       
+        </div>
+    </div>
+    </p>
+        
+    <p>
+   
+    </p>
+
+<p>
+</p>
+
+    </div>
+</div>
+
+
+
+</div>
+</div>
+</div>
