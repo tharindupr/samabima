@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 angular.module('app')
     .run(
         [
@@ -74,16 +74,13 @@ angular.module('app')
                             ]
                         }
                     })
-                    .state('persian', {
-                        abstract: true,
-                        url: '/persian',
-                        templateUrl: 'views/layout-persian.html'
-                    })
-                    .state('persian.dashboard', {
-                        url: '/dashboard',
-                        templateUrl: 'views/dashboard-persian.html',
+
+                    .state('app.post', {
+                        url: '/post/:id',
+                        templateUrl: 'views/post.html',
                         ncyBreadcrumb: {
-                            label: 'داشبورد'
+                            label: 'Post',
+                            description: ''
                         },
                         resolve: {
                             deps: [
@@ -92,54 +89,15 @@ angular.module('app')
                                     return $ocLazyLoad.load({
                                         serie: true,
                                         files: [
-                                            'lib/jquery/charts/sparkline/jquery.sparkline.js',
-                                            'lib/jquery/charts/easypiechart/jquery.easypiechart.js',
-                                            'lib/jquery/charts/flot/jquery.flot.js',
-                                            'lib/jquery/charts/flot/jquery.flot.resize.js',
-                                            'lib/jquery/charts/flot/jquery.flot.pie.js',
-                                            'lib/jquery/charts/flot/jquery.flot.tooltip.js',
-                                            'lib/jquery/charts/flot/jquery.flot.orderBars.js',
-                                            'app/controllers/dashboard.js',
-                                            'app/directives/realtimechart.js'
+                                            'app/controllers/post.js',
+                                            
                                         ]
                                     });
                                 }
                             ]
                         }
                     })
-                    .state('arabic', {
-                        abstract: true,
-                        url: '/arabic',
-                        templateUrl: 'views/layout-arabic.html'
-                    })
-                    .state('arabic.dashboard', {
-                        url: '/dashboard',
-                        templateUrl: 'views/dashboard-arabic.html',
-                        ncyBreadcrumb: {
-                            label: 'لوحة القيادة'
-                        },
-                        resolve: {
-                            deps: [
-                                '$ocLazyLoad',
-                                function($ocLazyLoad) {
-                                    return $ocLazyLoad.load({
-                                        serie: true,
-                                        files: [
-                                            'lib/jquery/charts/sparkline/jquery.sparkline.js',
-                                            'lib/jquery/charts/easypiechart/jquery.easypiechart.js',
-                                            'lib/jquery/charts/flot/jquery.flot.js',
-                                            'lib/jquery/charts/flot/jquery.flot.resize.js',
-                                            'lib/jquery/charts/flot/jquery.flot.pie.js',
-                                            'lib/jquery/charts/flot/jquery.flot.tooltip.js',
-                                            'lib/jquery/charts/flot/jquery.flot.orderBars.js',
-                                            'app/controllers/dashboard.js',
-                                            'app/directives/realtimechart.js'
-                                        ]
-                                    });
-                                }
-                            ]
-                        }
-                    })
+                    
                     .state('app.databoxes', {
                         url: '/databoxes',
                         templateUrl: 'views/databoxes.html',
