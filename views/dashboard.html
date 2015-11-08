@@ -83,6 +83,31 @@
                     </div>
                 </div>
                 <ul class="orders-list">
+                    <li class="order-item" ng-repeat="post in json | limitTo:6">
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
+                                <div>
+                                    <input type="checkbox" value="approve">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
+                                <div class="item-booker"><b>{{post["title"]}}</b></div>
+                                <div class="item-time">
+                                    <i class="fa fa-calendar"></i>
+                                    <span>{{post["created_date"]}}</span>
+                                </div>
+                                <p>
+                                    {{post["content"]}}
+                                </p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item-right">
+                                <div class="item-price">
+                                    <input type="button" class="btn btn-info" value="Approve">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--
                     <li class="order-item">
                         <div class="row">
                             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
@@ -167,30 +192,10 @@
                             </div>
                         </div>
                     </li>
-                    <li class="order-item">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
-                                <div>
-                                    <input type="checkbox" value="approve">
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                                <div class="item-booker">Ned Stards</div>
-                                <div class="item-time">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>10 minutes ago</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item-right">
-                                <div class="item-price">
-                                    <input type="button" class="btn btn-info" value="Approve">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    -->
                 </ul>
                 <div class="orders-footer">
-                    <a class="show-all" href=""><i class="fa fa-angle-down"></i> Show All</a>
+                    <a class="show-all" href="" ng-click="showAll()"><i class="fa fa-angle-down"></i> Show All</a>
                 </div>
             </div>
         </div>

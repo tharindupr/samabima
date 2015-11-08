@@ -1,0 +1,154 @@
+.landing-img-bar{
+    height: 330px;
+    background-size: 75%;
+    background-image: url('../img/landing-back.jpg');
+}
+
+.landing-auth{
+    background: #ffffff;
+    height: 330px;
+}
+.loginbox-title{
+    font-family: 'Lucida Sans','trebuchet MS',Arial,Helvetica;
+    font-size: 20px;
+    font-weight: normal;
+    color: #444;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.social-buttons{
+    margin-top: 5px;
+}
+
+.button-facebook {
+    float: left;
+    border: 2px solid #3b5998;
+    color: #3b5998;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    background-color: #fff;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.button-google {
+    float: left;
+    border: 2px solid #980307;
+    color: #a80202;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.button-facebook i {
+    font-size: 26px;
+    line-height: 50px;
+}
+
+.button-google i {
+    font-size: 26px;
+    line-height: 50px;
+}
+
+.social-title{
+    font-size: 14px;
+    font-weight: 500;
+    color: #a9a9a9;
+    text-align: center;
+}
+
+.loginbox-or {
+    position: relative;
+    text-align: center;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.or-line {
+    position: absolute;
+    height: 1px;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    background-color: #ccc;
+}
+
+.or {
+    position: absolute;
+    top: 0;
+    -lh-property: 0;
+    left: -webkit-calc(50% - 25px);
+    left: -moz-calc(50% - 25px);
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    color: #999;
+    margin: 0 auto;
+}
+
+.loginbox-textbox{
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.loginbox-forgot{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.loginbox-signup{
+    margin-top: 20px;
+}
+
+.loginbox-submit{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.landing-bottom{
+    background: #dcdcdc;
+}
+
+.landing-bottom-head{
+    margin-top: 10px;
+}
+
+.landing-block{
+    background: #0072c6;
+    width: 20%;
+    float: left;
+    height: 100px;
+    margin-left: 10%;
+    border-radius: 5px;
+    color: white;
+}
+
+.block-icon i{
+    margin-top: 10px;
+}
+
+.block-data{
+    font-size: 4em;
+    text-align: right;
+    font-weight: bold;
+}
+
+.block-text{
+    text-align: right;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-top: -5px;
+}
+
+.landing-bottom-tail{
+    background: #2798ac;
+    margin-top: 10px;
+    height: 200px;
+}

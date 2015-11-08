@@ -44,7 +44,7 @@ app.controller('FeedPostCtrl',function($scope,$http){
      $scope.ta=[];
       $scope.postdata = function(t,c) {
 
-            for(i in $scope.tags)
+            for(var i in $scope.tags)
               {
              
                 $scope.ta[i]=$scope.tags[i]['text'];

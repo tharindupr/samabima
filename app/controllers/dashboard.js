@@ -3,7 +3,7 @@
 app
     // Dashboard Box controller 
     .controller('DashboardCtrl', [
-        '$rootScope', '$scope', function($rootScope, $scope) {
+        '$rootScope', '$scope','$http', function($rootScope, $scope, $http) {
 
             $scope.boxWidth = $('.box-tabbs').width() - 20;
 
@@ -137,16 +137,18 @@ app
                     color: '#5db2ff'
                 }
             ];
-            $scope.visitorSourcePieOptions = {
-                series: {
-                    pie: {
-                        innerRadius: 0.45,
-                        show: true,
-                        stroke: {
-                            width: 4
-                        }
-                    }
-                }
-            };
+
+            $scope.showAll = function(){
+                $('.order-item').attr("ng-repeat","post in json")
+            }
+
+            $http({
+                method: "GET",
+                url: "http://hexmatter.cloudapp.net/post"}).success(function(data, status, header, config){
+                console.log(data);
+                $scope.json=data;
+            });
         }
     ]);
+
+
