@@ -31,7 +31,7 @@ $http({
  }
 
 
-      
+ $scope.coment="";     
 
 });
 
