@@ -9,27 +9,28 @@ $http({
       url: "http://hexmatter.cloudapp.net/post/1"}).success(function(data, status, header, config){
           $scope.json=data;
           $scope.tagss=new Array();
-          console.log($scope.json['post_id']);
-          $scope.upvotes=$scope.json['upvote_count'];
-          $scope.downvotes=$scope.json['downvote_count'];
-          $scope.votemagnitude=$scope.upvotes-$scope.downvotes;
-		  //console.log($scope.upvotes);
+          $scope.upvote=parseInt($scope.json['upvote_count']);
+          $scope.downvote=parseInt($scope.json['downvote_count']);
+          $scope.votemagnitude=$scope.upvote-$scope.downvote;
+		  //console.log($scope.downvotes+1);
          
 });
 
+ $scope.upVote = function() {
+ 	$scope.upvote+=1;
+ 	$scope.votemagnitude=$scope.upvote-$scope.downvote;
+ 	console.log($scope.upvote);
 
-function downvote(){
+ }
 
-		$scope.downvote-=1;
+ $scope.downVote = function() {
+ 	$scope.downvote+=1;
+ 	$scope.votemagnitude=$scope.upvote-$scope.downvote;
+ 	console.log(2);
 
-}      
-
-function downvote(){
-
-		$scope.upvote+=1;
+ }
 
 
-}
       
 
 });
