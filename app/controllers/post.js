@@ -4,6 +4,8 @@
 app.
 controller('PostCtrl', function ($scope,$http,$stateParams) {
 $scope.votemagnitude=0;
+$scope.button1_clicked=false;
+$scope.button2_clicked=false;
 $http({
       method: "GET",
       url: "http://hexmatter.cloudapp.net/post/1"}).success(function(data, status, header, config){
@@ -20,13 +22,14 @@ $http({
  	$scope.upvote+=1;
  	$scope.votemagnitude=$scope.upvote-$scope.downvote;
  	console.log($scope.upvote);
-
+ 	$scope.button1_clicked=true;
  }
 
  $scope.downVote = function() {
  	$scope.downvote+=1;
  	$scope.votemagnitude=$scope.upvote-$scope.downvote;
  	console.log(2);
+ 	$scope.button2_clicked=true;
 
  }
 

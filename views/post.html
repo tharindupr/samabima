@@ -34,13 +34,13 @@
         
        
         <div>
-            <i class="fa fa-chevron-up fa-3x" ng-click="upVote()"></i>
+            <i class="fa fa-chevron-up fa-3x" ng-click="upVote()" ng-disabled="button_clicked"></i>
         </div>
         <div style="font-size:20px;">
             &nbsp;{{votemagnitude}}
         </div>
         <div>
-            <i class="fa fa-chevron-down fa-3x"ng-click="downVote()"></i>
+            <i class="fa fa-chevron-down fa-3x"ng-click="downVote()" ng-disabled="button_clicked"></i>
         </div>
        
      
