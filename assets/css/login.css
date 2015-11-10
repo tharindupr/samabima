@@ -1,12 +1,12 @@
 .landing-img-bar{
-    height: 330px;
-    background-size: 75%;
+    height: 310px;
+    background-size: 80%;
     background-image: url('../img/landing-back.jpg');
 }
 
 .landing-auth{
     background: #ffffff;
-    height: 330px;
+    height: 310px;
 }
 .loginbox-title{
     font-family: 'Lucida Sans','trebuchet MS',Arial,Helvetica;
@@ -81,7 +81,6 @@
 .or {
     position: absolute;
     top: 0;
-    -lh-property: 0;
     left: -webkit-calc(50% - 25px);
     left: -moz-calc(50% - 25px);
     left: calc(50% - 25px);
@@ -100,11 +99,10 @@
 
 .loginbox-forgot{
     margin-top: 10px;
-    margin-bottom: 5px;
 }
 
 .loginbox-signup{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .loginbox-submit{
@@ -120,35 +118,64 @@
     margin-top: 10px;
 }
 
-.landing-block{
-    background: #0072c6;
-    width: 20%;
-    float: left;
-    height: 100px;
-    margin-left: 10%;
-    border-radius: 5px;
-    color: white;
+.landing-bottom-left{
+
 }
 
-.block-icon i{
+
+.landing-block{
+    border: 1px solid #0072C6;
+    border-radius: 10px;
+    height: 100px;
     margin-top: 10px;
 }
 
-.block-data{
-    font-size: 4em;
-    text-align: right;
-    font-weight: bold;
+.block-head{
+    height: 60px;
 }
 
-.block-text{
+.block-bottom{
+    background: #0072C6;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 40px;
+}
+
+.landing-block-icon{
+    color: white;
+}
+
+.landing-block-number{
+    font-size: 4em;
     text-align: right;
-    font-size: 1.4em;
-    font-weight: 700;
-    margin-top: -5px;
+    color: #0072c6;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-right: 5px;
+}
+
+.block-title{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-top: 7px;
+    font-weight: 100;
+}
+
+.landing-box-text{
+    text-align: right;
 }
 
 .landing-bottom-tail{
     background: #2798ac;
     margin-top: 10px;
     height: 200px;
+}
+
+.posts-recent-container{
+    background: white;
 }

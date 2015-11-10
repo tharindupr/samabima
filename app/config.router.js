@@ -668,7 +668,7 @@ angular.module('app')
                         url: '/viewmessage',
                         templateUrl: 'views/message-view.html',
                         ncyBreadcrumb: {
-                            label: 'Veiw Message'
+                            label: 'View Message'
                         }
                     })
                     .state('app.messagecompose', {
