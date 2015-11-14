@@ -373,3 +373,46 @@
     }
 
 }
+
+
+.post-count span:hover{
+    color: #0072C6;
+    cursor: pointer;
+}
+
+.login-area .dropdown-toggle i{
+    color: white;
+    margin-left: 5px;
+}
+
+
+.more-action-drop-down{
+    margin-left: 10px;
+    color: white;
+}
+
+#title{
+    margin-bottom: 5px;
+}
+
+#content{
+    resize: none;
+}
+
+.btn-darkblue{
+    background-color: #0072c6 !important;
+    border-color: #0072c6;
+    color: #fff;
+}
+
+.btn-darkblue:focus {
+    background-color: #0072c6 !important;
+    border-color: #043fa3;
+    color: #fff;
+}
+
+.btn-darkblue:hover {
+    background-color: #0088e8 !important;
+    border-color: #0088e8;
+    color: #fff;
+}
