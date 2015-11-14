@@ -3,6 +3,7 @@
 
 app.
 controller('PostCtrl', function ($scope,$http,$stateParams) {
+	$scope.a=1;
 $scope.votemagnitude=0;
 $scope.button1_clicked=false;
 $scope.button2_clicked=false;
@@ -23,6 +24,8 @@ $http({
  	$scope.votemagnitude=$scope.upvote-$scope.downvote;
  	console.log($scope.upvote);
  	$scope.button1_clicked=true;
+
+
  }
 
  $scope.downVote = function() {
