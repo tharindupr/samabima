@@ -15,7 +15,7 @@ angular.module('app')
             function($stateProvider, $urlRouterProvider) {
 
                 $urlRouterProvider
-                    .otherwise('/app/feed');
+                    .otherwise('/login');
                 $stateProvider
                     .state('app', {
                         abstract: true,
