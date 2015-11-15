@@ -114,6 +114,7 @@
 .landing-bottom{
     background: #dcdcdc;
     padding-bottom: 5px;
+    height: 880px;
 }
 
 .landing-bottom-head{
@@ -174,23 +175,32 @@
 
 .landing-bottom-tail{
     margin-top: 10px;
-    height: 200px;
+    height: 500px
 }
 
 .featured-header{
     background: white;
     border-left: 3px solid #0072C6;
+    width: 90%;
 }
 
-.my-post{
+.featured-landing-post{
     margin-top: 20px;
-    border-left: 2px solid #808080;
-    border-right: 2px solid #808080;
+    background-color: white;
+    padding: 10px;
+}
+
+.event-post{
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 15px;
+    float: left;
 }
 
 .featured-container{
     margin-top: 5px;
-    height: 295px;
+    height: 450px;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -304,7 +314,7 @@
 }
 
 .footer-distributed .footer-icons a:hover {
-    background: blue;
+    background: #5383d3;
 }
 
 
@@ -415,4 +425,31 @@
     background-color: #0088e8 !important;
     border-color: #0088e8;
     color: #fff;
+}
+
+.sub-header{
+    background-color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+
+    padding-bottom: 7px;
+    border-left: 3px solid #0072C6;
+    margin-bottom: 10px;
+}
+
+.sub-header p{
+    margin-bottom: 0px;
+}
+
+.add-margin{
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.post {
+    width: 500px;
+}
+
+.event-container{
+    height: 300px;
 }

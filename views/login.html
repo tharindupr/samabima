@@ -51,7 +51,7 @@
                                 <h6>Latest Posts</h6>
                             </div>
                             <div class="col-lg-12 featured-container mCustomScrollbar" data-mcs-axis="y">
-                                <div class="col-lg-offset-1 col-lg-11 item-left my-post">
+                                <div class="col-lg-offset-1 col-lg-11 item-left featured-landing-post">
                                     <div class="item-booker"><b class="ng-binding">වාරියපොළ සිදුවීම</b></div>
                                     <div class="item-time">
                                         <i class="fa fa-calendar"></i>
@@ -60,8 +60,13 @@
                                     <p class="ng-binding">
                                         වාරියපොළ බස් නැවතුම්පොළ අසළදී මා හට සිදු වූ අතවරයකට  ප්&zwj;රතිචාර ලෙස අදාල පුද්ගලයා හට බැන වදින අවස්ථාව වීඩියෝ ගත කර ඇති අතර දැන් එය සමාජ මාධ්&zwj;ය ජාල වල පැතිරෙමින් පවතී. එහි සත්&zwj;ය පසුබිම නොදත් බොහෝ දෙනා පල කරන ප්&zwj;රතිචාර නිසා මගේ ප්&zwj;රතිරුඋපයට හානි වේ.
                                     </p>
+                                    <div class="post-count pull-left">
+                                        <span  style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-comment-o"></i> 10 {{post['comment_count']}}</span>
+                                        <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-up"></i> 120 {{post['upvote_count']}}</span>
+                                        <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-down"></i> 15 {{post['downvote_count']}}</span>
+                                    </div>
                                 </div>
-                                <div class="col-lg-offset-1 col-lg-11 item-left my-post">
+                                <div class="col-lg-offset-1 col-lg-11 item-left featured-landing-post">
                                     <div class="item-booker"><b class="ng-binding">We will consider this.</b></div>
                                     <div class="item-time">
                                         <i class="fa fa-calendar"></i>
@@ -70,9 +75,14 @@
                                     <p class="ng-binding">
                                         Hi,Thank you for informing us about this. We will do a background check and file an entry. If this is true, we can win the fight against them. Until then, please do not try to make any scenarios.
                                     </p>
+                                    <div class="post-count pull-left">
+                                        <span  style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-comment-o"></i> 10 {{post['comment_count']}}</span>
+                                        <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-up"></i> 120 {{post['upvote_count']}}</span>
+                                        <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-down"></i> 15 {{post['downvote_count']}}</span>
+                                    </div>
                                 </div>
 
-                                <div class="col-lg-offset-1 col-lg-11 item-left my-post">
+                                <div class="col-lg-offset-1 col-lg-11 item-left featured-landing-post">
                                     <div class="item-booker"><b class="ng-binding">We will consider this.</b></div>
                                     <div class="item-time">
                                         <i class="fa fa-calendar"></i>
@@ -81,9 +91,14 @@
                                     <p class="ng-binding">
                                         Hi,Thank you for informing us about this. We will do a background check and file an entry. If this is true, we can win the fight against them. Until then, please do not try to make any scenarios.
                                     </p>
+                                    <div class="post-count pull-left">
+                                        <span  style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-comment-o"></i> 10 {{post['comment_count']}}</span>
+                                        <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-up"></i> 120 {{post['upvote_count']}}</span>
+                                        <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-down"></i> 15 {{post['downvote_count']}}</span>
+                                    </div>
                                 </div>
 
-                                <div class="col-lg-offset-1 col-lg-11 item-left my-post">
+                                <div class="col-lg-offset-1 col-lg-11 item-left featured-landing-post">
                                     <div class="item-booker"><b class="ng-binding">We will consider this.</b></div>
                                     <div class="item-time">
                                         <i class="fa fa-calendar"></i>
@@ -92,42 +107,27 @@
                                     <p class="ng-binding">
                                         Hi,Thank you for informing us about this. We will do a background check and file an entry. If this is true, we can win the fight against them. Until then, please do not try to make any scenarios.
                                     </p>
+                                    <div class="post-count pull-left">
+                                        <span  style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-comment-o"></i> 10 {{post['comment_count']}}</span>
+                                        <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-up"></i> 120 {{post['upvote_count']}}</span>
+                                        <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-down"></i> 15 {{post['downvote_count']}}</span>
+                                    </div>
                                 </div>
                             </div>
 
 
                         </div>
                     </div>
-                    <ul class="orders-list">
-                        <li class="order-item" ng-repeat="post in json | limitTo:6">
-                            <div class="row">
-                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 item-left">
-                                    <div>
-                                        <input type="checkbox" value="approve">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                                    <div class="item-booker"><b>{{post["title"]}}</b></div>
-                                    <div class="item-time">
-                                        <i class="fa fa-calendar"></i>
-                                        <span>{{post["created_date"]}}</span>
-                                    </div>
-                                    <p>
-                                        {{post["content"]}}
-                                    </p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item-right">
-                                    <div class="item-price">
-                                        <input type="button" class="btn btn-info" value="Approve">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
+
         </div>
         <div class="col-lg-3 landing-bottom-left">
+            <div class="row" >
+                <div class="sub-header col-lg-10 col-md-10">
+                    <p>Sadisi Overview</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-11">
                     <div class="landing-block">
@@ -186,6 +186,88 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-11 add-margin featured-header">
+            <h6>Upcoming Events</h6>
+        </div>
+        <div class="event-container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3 item-left event-post">
+                    <div class="item-booker"><b class="ng-binding">A Campaign</b></div>
+                    <div class="item-time">
+                        <i class="fa fa-calendar"></i>
+                        <span class="ng-binding">2015-09-20 04:24:20</span>
+                    </div>
+                    <p class="ng-binding">
+                        Hi,Thank you for informing us about this. We will do a background check and file an entry.
+                        If this is true, we can win the fight against them.
+                    </p>
+                </div>
+                <div class="col-lg-3 item-left event-post">
+                    <div class="item-booker"><b class="ng-binding">A Campaign</b></div>
+                    <div class="item-time">
+                        <i class="fa fa-calendar"></i>
+                        <span class="ng-binding">2015-09-20 04:24:20</span>
+                    </div>
+                    <p class="ng-binding">
+                        Hi,Thank you for informing us about this. We will do a background check and file an entry.
+                        If this is true, we can win the fight against them.
+                    </p>
+                </div>
+                <div class="col-lg-3 item-left event-post">
+                    <div class="item-booker"><b class="ng-binding">A Campaign</b></div>
+                    <div class="item-time">
+                        <i class="fa fa-calendar"></i>
+                        <span class="ng-binding">2015-09-20 04:24:20</span>
+                    </div>
+                    <p class="ng-binding">
+                        Hi,Thank you for informing us about this. We will do a background check and file an entry.
+                        If this is true, we can win the fight against them.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3 item-left event-post">
+                    <div class="item-booker"><b class="ng-binding">A Campaign</b></div>
+                    <div class="item-time">
+                        <i class="fa fa-calendar"></i>
+                        <span class="ng-binding">2015-09-20 04:24:20</span>
+                    </div>
+                    <p class="ng-binding">
+                        Hi,Thank you for informing us about this. We will do a background check and file an entry.
+                        If this is true, we can win the fight against them.
+                    </p>
+                </div>
+                <div class="col-lg-3 item-left event-post">
+                    <div class="item-booker"><b class="ng-binding">A Campaign</b></div>
+                    <div class="item-time">
+                        <i class="fa fa-calendar"></i>
+                        <span class="ng-binding">2015-09-20 04:24:20</span>
+                    </div>
+                    <p class="ng-binding">
+                        Hi,Thank you for informing us about this. We will do a background check and file an entry.
+                        If this is true, we can win the fight against them.
+                    </p>
+                </div>
+                <div class="col-lg-3 item-left event-post">
+                    <div class="item-booker"><b class="ng-binding">A Campaign</b></div>
+                    <div class="item-time">
+                        <i class="fa fa-calendar"></i>
+                        <span class="ng-binding">2015-09-20 04:24:20</span>
+                    </div>
+                    <p class="ng-binding">
+                        Hi,Thank you for informing us about this. We will do a background check and file an entry.
+                        If this is true, we can win the fight against them.
+                    </p>
                 </div>
             </div>
         </div>
