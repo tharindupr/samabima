@@ -89,7 +89,7 @@
         <h3 tyle="font-size:20px">{{post["title"]}}</h3>
         <h5><span>{{ post["created_date"]}}</span> </h5>
         
-             <p style="text-justify: distribute">{{post["content"].split(" ").slice(0,50).join(" ")}}<a href="#/app/post/324">[continue reading…]</a></p>
+             <p style="text-justify: distribute">{{post["content"].split(" ").slice(0,50).join(" ")}}<a href={{"#/app/post/"+post['post_id']}}>[continue reading…]</a></p>
 
 
              <div class="pull-right">

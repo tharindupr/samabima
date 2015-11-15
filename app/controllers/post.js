@@ -3,13 +3,13 @@
 
 app.
 controller('PostCtrl', function ($scope,$http,$stateParams) {
-	$scope.a=1;
+
 $scope.votemagnitude=0;
 $scope.button1_clicked=false;
 $scope.button2_clicked=false;
 $http({
       method: "GET",
-      url: "http://hexmatter.cloudapp.net/post/1"}).success(function(data, status, header, config){
+      url: "http://hexmatter.cloudapp.net/post/"+$stateParams.id}).success(function(data, status, header, config){
           $scope.json=data;
           $scope.tagss=new Array();
           $scope.upvote=parseInt($scope.json['upvote_count']);
@@ -60,5 +60,36 @@ app.controller('FeedTagCtrl',function($scope,$http){
         
         
             
+
+});
+
+
+
+app.controller('CommentsCtrl',function($scope,$http){
+
+
+	$scope.content=""
+
+	function postComment(){
+		console.log('working..!!');
+		 var comment = {
+                title : "",
+                content : $scope.content,
+                is_anonymouse : false,
+                post_type_id: 1,
+                //tags : $scope.title
+
+            };  
+            console.log(post);
+            var res = $http.post("http://hexmatter.cloudapp.net/post/2/comment", comment);
+            res.success(function(data, status, headers, config) {
+              location.reload();
+              
+            });
+
+
+
+
+	}
 
 });

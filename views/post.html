@@ -75,27 +75,27 @@
               
                    
                 
-                        <div>
+                        <div ng-controller="CommentsCtrl">
                             <form class="form-horizontal form-bordered" role="form">
                               
                                 <div class="form-group">
                                     <div class="`col-sm-2">
-                                    <img class="[ img-rounded pull-left ]" src="http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg" alt="Mouse0270" width="40px" height="40px" style="padding-left: 16px; padding-top: 4px" />  
+                                    <img class="[ img-rounded pull-left ]" src="http://www.realtimearts.net/data/images/art/46/4640_profile_nilssonpolias.jpg" alt="Mouse0270" width="60px" height="40px" style="padding-left: 16px; padding-top: 4px" />  
                                     </div>
                                     <div class="col-sm-10">
                                        
-                                          <textarea  msd-elastic  class="form-control input-lg" id="content" placeholder="Whats your opinion".. ng-model="coment">
+                                          <textarea  msd-elastic  class="form-control input-lg" id="content" placeholder="Whats your opinion".. ng-model="coment" ng-model="content">
                                           </textarea>
                                     </div>
 
-                                     <div class="col-sm-1">
-                                        <button type="submit" class="btn btn-primary pull-right">Post</button>
-                                    </div>
+                                    
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="form-group" style="width">
                                     <div class="col-sm-10">
-                                       Comment
+                                        
+                                        <button ng-click="postComment();" class="btn btn-primary pull-right">Post{{content}}</button>
+                                        
                                     </div>
                                 </div>
                             </form>
