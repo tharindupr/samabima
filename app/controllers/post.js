@@ -1,8 +1,7 @@
 'use strict';
 
 
-app.
-controller('PostCtrl', function ($scope,$http,$stateParams) {
+app.controller('PostCtrl', function ($scope,$http,$stateParams) {
 
 $scope.votemagnitude=0;
 $scope.button1_clicked=false;
@@ -65,31 +64,28 @@ app.controller('FeedTagCtrl',function($scope,$http){
 
 
 
-app.controller('CommentsCtrl',function($scope,$http){
+app.controller('CommentsCtrl',function($scope,$http,$stateParams){
 
 
-	$scope.content=""
+	$scope.content="";
 
-	function postComment(){
-		console.log('working..!!');
-		 var comment = {
+	$scope.postComment = function(){
+    		var comment = {
                 title : "",
                 content : $scope.content,
                 is_anonymouse : false,
-                post_type_id: 1,
+                post_type_id: 2,
                 //tags : $scope.title
 
             };  
-            console.log(post);
-            var res = $http.post("http://hexmatter.cloudapp.net/post/2/comment", comment);
+
+
+            console.log(comment);
+            var res = $http.post("http://hexmatter.cloudapp.net/post/"+$stateParams.id+"/comment", comment);
             res.success(function(data, status, headers, config) {
               location.reload();
               
             });
 
-
-
-
-	}
-
+   };
 });
