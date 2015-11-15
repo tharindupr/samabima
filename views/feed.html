@@ -92,7 +92,7 @@
              <p style="text-justify: distribute">{{post["content"].split(" ").slice(0,50).join(" ")}}<a href={{"#/app/post/"+post['post_id']}}>[continue reading…]</a></p>
 
 
-             <div class="pull-right">
+             <div class="post-count pull-left">
                     <span  style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-comment-o"></i> {{post['comment_count']}}</span>
                     <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-up"></i> {{post['upvote_count']}}</span>
                     <span style="margin-right:5px; font-size:16px"><i style="padding:2px;" class="fa fa-thumbs-o-down"></i> {{post['downvote_count']}}</span>
