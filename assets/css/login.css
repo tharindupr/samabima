@@ -2,7 +2,23 @@
     height: 310px;
     background-size: 80%;
     margin-left: 0px;
-    background-image: url('../img/landing-back.jpg');
+    background-image: url('../img/landing-back-2.jpg');
+}
+
+.image-text{
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    top: 195px;
+    right: 7px;
+    padding: 10px;
+}
+
+.image-text p{
+    font-size: 17px;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #565454;
+    margin: 0px;
 }
 
 .landing-auth{
@@ -114,7 +130,7 @@
 .landing-bottom{
     background: #dcdcdc;
     padding-bottom: 5px;
-    height: 880px;
+    height: 900px;
 }
 
 .landing-bottom-head{
@@ -131,6 +147,13 @@
     /*border-radius: 10px;*/
     height: 100px;
     margin-top: 10px;
+    margin-left: -10px;
+    margin-right: -25px;
+}
+
+.posts-recent-container{
+    width: 96%;
+    margin: 0 auto;
 }
 
 .block-head{
@@ -175,34 +198,35 @@
 
 .landing-bottom-tail{
     margin-top: 10px;
-    height: 500px
+    height: 750px;
 }
 
 .featured-header{
     background: white;
     border-left: 3px solid #0072C6;
-    width: 90%;
+    width: 98%;
+    margin-left: 20px;
 }
 
 .featured-landing-post{
     margin-top: 20px;
     background-color: white;
     padding: 10px;
+    margin-left: 5px;
+    width: 101%;
 }
 
 .event-post{
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: white;
     padding: 10px;
-    margin-left: 15px;
-    float: left;
+    margin-left: 5px;
+    width: 92%;
 }
 
 .featured-container{
     margin-top: 5px;
-    height: 450px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    height: 750px;
 }
 
 
@@ -431,10 +455,9 @@
     background-color: white;
     padding: 5px 10px;
     margin-top: 10px;
-
     padding-bottom: 7px;
     border-left: 3px solid #0072C6;
-    margin-bottom: 10px;
+    margin-left: 4px;
 }
 
 .sub-header p{
